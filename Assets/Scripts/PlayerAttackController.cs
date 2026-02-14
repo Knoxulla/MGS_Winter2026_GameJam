@@ -34,13 +34,13 @@ public class PlayerAttackController : MonoBehaviour
         if (attackIsHeld)
         {
             currentCharge += chargeAddedPerFrame;
-            currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
         }
         else
         {
             currentCharge -= chargeRemovedPerFrame;
-            currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
         }
+
+        currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
 
         UpdateChargeIndicator();
         CalculateDmgMultiplier();
