@@ -924,6 +924,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8918169551643806228, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: BaseDmg
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918169551643806228, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: chargeAddedPerFrame
       value: 0.05
       objectReference: {fileID: 0}

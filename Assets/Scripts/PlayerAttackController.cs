@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerAttackController : MonoBehaviour
 {
     [SerializeField] float currentCharge;
+    [SerializeField] float BaseDmg;
     [SerializeField] float maxChargeAmt;
     [SerializeField] float chargeAddedPerFrame;
     [SerializeField] float chargeRemovedPerFrame;
@@ -13,6 +14,7 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] Image chargeIndicator;
 
     bool attackIsHeld = false;
+    float modifiedDmg = 0f;
 
     public void OnAttack(InputAction.CallbackContext ctx)
     {
@@ -46,9 +48,18 @@ public class PlayerAttackController : MonoBehaviour
 
     private void CalculateDmgMultiplier()
     {
+        // Returns
         if (currentCharge == maxChargeAmt || !attackIsHeld) return;
 
+
+        if (chargeDmgMultiplier < 1)
+        {
+            chargeDmgMultiplier = 1;
+        }
+
         chargeDmgMultiplier += currentCharge;
+        modifiedDmg = chargeDmgMultiplier * BaseDmg;
+
     }
 
     private void UpdateChargeIndicator()
