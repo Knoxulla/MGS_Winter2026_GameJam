@@ -248,6 +248,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
+--- !u!4 &414810130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2717896987918869718, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+  m_PrefabInstance: {fileID: 6009634366583626476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +838,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 581219701427882346, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7043891
+      objectReference: {fileID: 0}
+    - target: {fileID: 581219701427882346, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8725857
+      objectReference: {fileID: 0}
+    - target: {fileID: 581219701427882346, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.031445146
+      objectReference: {fileID: 0}
+    - target: {fileID: 581219701427882346, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.019652903
+      objectReference: {fileID: 0}
     - target: {fileID: 771823184294182598, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -844,6 +865,10 @@ PrefabInstance:
     - target: {fileID: 1251329940445119706, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_SortingOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717896987918869718, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 3375165453836166421, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -933,6 +958,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3912490384911331326, guid: 68e7d1e7c9d4d61439a517e7a6c319bd, type: 3}
+    - target: {fileID: 7367397773535108848, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7982224200607762857, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.6
@@ -940,6 +969,26 @@ PrefabInstance:
     - target: {fileID: 7982224200607762857, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705061152285244448, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.19472308
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705061152285244448, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.45320654
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705061152285244448, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705061152285244448, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.009941721
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705061152285244448, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0070266724
       objectReference: {fileID: 0}
     - target: {fileID: 8918169551643806228, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: maxChargeAmt
@@ -954,10 +1003,15 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8918169551643806228, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: projectileSpawnPoint
+      value: 
+      objectReference: {fileID: 414810130}
+    - target: {fileID: 8918169551643806228, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: chargeRemovedPerFrame
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8705061152285244448, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6521971842943963981, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
     m_AddedGameObjects: []
