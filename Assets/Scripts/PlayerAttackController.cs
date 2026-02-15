@@ -1,16 +1,74 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerAttackController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] float currentCharge;
+    [SerializeField] float BaseDmg;
+    [SerializeField] float maxChargeAmt;
+    [SerializeField] float chargeAddedPerFrame;
+    [SerializeField] float chargeRemovedPerFrame;
+    [SerializeField] float chargeDmgMultiplier;
+
+    [SerializeField] Image chargeIndicator;
+
+    bool attackIsHeld = false;
+    float modifiedDmg = 0f;
+
+    public void OnAttack(InputAction.CallbackContext ctx)
     {
-        
+        if (ctx.started)
+        {
+            attackIsHeld = true;
+        }
+        else if(ctx.canceled)
+        {
+            attackIsHeld = false;
+            chargeDmgMultiplier = 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if (attackIsHeld)
+        {
+            currentCharge += chargeAddedPerFrame;
+        }
+        else
+        {
+            currentCharge -= chargeRemovedPerFrame;
+        }
+
+        currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
+
+        UpdateChargeIndicator();
+        CalculateDmgMultiplier();
+    }
+
+    private void CalculateDmgMultiplier()
+    {
+        // Returns
+        if (currentCharge == maxChargeAmt || !attackIsHeld) return;
+
+
+        if (chargeDmgMultiplier < 1)
+        {
+            chargeDmgMultiplier = 1;
+        }
+
+        chargeDmgMultiplier += currentCharge;
+        modifiedDmg = chargeDmgMultiplier * BaseDmg;
+
+    }
+
+    private void UpdateChargeIndicator()
+    { 
+        chargeIndicator.fillAmount = currentCharge / maxChargeAmt;
+
+        if (currentCharge == maxChargeAmt)
+        { 
+            // do special indicator/sound!
+        }
     }
 }
