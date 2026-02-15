@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class PlayerAttackController : MonoBehaviour
 {
-    [SerializeField] float currentCharge;
-    [SerializeField] float BaseDmg;
-    [SerializeField] float maxChargeAmt;
-    [SerializeField] float chargeAddedPerFrame;
-    [SerializeField] float chargeRemovedPerFrame;
-    [SerializeField] float chargeDmgMultiplier;
+    [SerializeField] float currentCharge = 0f;
+    [SerializeField] float BaseDmg = 1;
+    [SerializeField] float maxChargeAmt = 1f;
+    [SerializeField] float chargeAddedPerFrame = 0.2f;
+    [SerializeField] float chargeRemovedPerFrame = 0.5f;
+    [SerializeField] float chargeDmgMultiplier = 1f;
 
     [SerializeField] Image chargeIndicator;
 
