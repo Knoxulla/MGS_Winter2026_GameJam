@@ -4,8 +4,17 @@ using UnityEngine.UI;
 
 public class PlayerAttackController : MonoBehaviour
 {
+    [Header("Damage")]
+    [SerializeField] float baseDmg = 1;
+    [SerializeField, Tooltip("additive damage modifer to be modified by powerUps")] float damageModifier = 0;
+
+    [Header("Speed")]
+    [SerializeField] float slowPerFrame = 0.01f;
+    [SerializeField] float speedUpPerFrame = 0.03f;
+    private float originalSPD = 1;
+
+    [Header("Charge")]
     [SerializeField] float currentCharge = 0f;
-    [SerializeField] float BaseDmg = 1;
     [SerializeField] float maxChargeAmt = 1f;
     [SerializeField] float chargeAddedPerFrame = 0.2f;
     [SerializeField] float chargeRemovedPerFrame = 0.5f;
@@ -15,6 +24,11 @@ public class PlayerAttackController : MonoBehaviour
 
     bool attackIsHeld = false;
     float modifiedDmg = 0f;
+
+    private void Start()
+    {
+        originalSPD = PlayerMASTER.Instance.playerMovementController.adjustedSpeed;
+    }
 
     public void OnAttack(InputAction.CallbackContext ctx)
     {
@@ -34,10 +48,27 @@ public class PlayerAttackController : MonoBehaviour
         if (attackIsHeld)
         {
             currentCharge += chargeAddedPerFrame;
+            if (PlayerMASTER.Instance.playerMovementController.adjustedSpeed > 0.01f)
+            {
+                PlayerMASTER.Instance.playerMovementController.adjustedSpeed -= slowPerFrame;
+            }
+            else
+            {
+                PlayerMASTER.Instance.playerMovementController.adjustedSpeed = 0.01f;
+            }
         }
         else
         {
             currentCharge -= chargeRemovedPerFrame;
+
+            if (PlayerMASTER.Instance.playerMovementController.adjustedSpeed < originalSPD)
+            {
+                PlayerMASTER.Instance.playerMovementController.adjustedSpeed += speedUpPerFrame;
+            }
+            else
+            {
+                PlayerMASTER.Instance.playerMovementController.adjustedSpeed = originalSPD;
+            }
         }
 
         currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
@@ -58,7 +89,7 @@ public class PlayerAttackController : MonoBehaviour
         }
 
         chargeDmgMultiplier += currentCharge;
-        modifiedDmg = chargeDmgMultiplier * BaseDmg;
+        modifiedDmg = chargeDmgMultiplier * (baseDmg + damageModifier);
 
     }
 
