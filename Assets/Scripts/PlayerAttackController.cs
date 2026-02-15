@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PlayerAttackController : MonoBehaviour
 {
+    #region Variables
     [Header("Damage")]
     [SerializeField] float baseDmg = 1;
     [SerializeField, Tooltip("additive damage modifer to be modified by powerUps")] float damageModifier = 0;
+    [SerializeField, Tooltip("Automatically changes, this is just so it can be viewed")] float modifiedDmg = 0f;
 
     [Header("Speed")]
     [SerializeField] float slowPerFrame = 0.01f;
@@ -22,29 +25,24 @@ public class PlayerAttackController : MonoBehaviour
 
     [SerializeField] Image chargeIndicator;
 
+    [Header("Aim")]
+    [SerializeField] GameObject aimObject;
+    [SerializeField] GameObject projectile;
+    [SerializeField] Transform projectileSpawnPoint;
+
     bool attackIsHeld = false;
-    float modifiedDmg = 0f;
+    
+
+    #endregion
 
     private void Start()
     {
         originalSPD = PlayerMASTER.Instance.playerMovementController.adjustedSpeed;
     }
 
-    public void OnAttack(InputAction.CallbackContext ctx)
-    {
-        if (ctx.started)
-        {
-            attackIsHeld = true;
-        }
-        else if(ctx.canceled)
-        {
-            attackIsHeld = false;
-            chargeDmgMultiplier = 0;
-        }
-    }
-
     private void FixedUpdate()
     {
+
         if (attackIsHeld)
         {
             currentCharge += chargeAddedPerFrame;
@@ -74,13 +72,61 @@ public class PlayerAttackController : MonoBehaviour
         currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
 
         UpdateChargeIndicator();
-        CalculateDmgMultiplier();
+        CalculateDmg();
+
     }
 
-    private void CalculateDmgMultiplier()
+    #region Aim
+
+    public void OnLook(InputAction.CallbackContext ctx)
+    { 
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
+        //LookAt(Vector3.zero);
+        LookAt(mousePos);
+    }
+
+    public void LookAt(Vector3 target)
+    {
+        float lookAngle = AngleBetweenTwoPoints(aimObject.transform.position, target);
+
+        aimObject.transform.localEulerAngles = new Vector3(0, 0, lookAngle + 90f);
+    }
+
+    private float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
+    {
+        return Mathf.Atan2(a.y -b.y, a.x - b.x) * Mathf.Rad2Deg;
+    }
+
+    #endregion
+
+    #region Attack
+    public void OnAttack(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            attackIsHeld = true;
+        }
+        else if (ctx.canceled)
+        {
+            attackIsHeld = false;
+            chargeDmgMultiplier = 0;
+
+            // Do Attack
+            PerformAttack();
+        }
+    }
+
+    private void PerformAttack()
+    {
+       GameObject obj = Instantiate(projectile, projectileSpawnPoint);
+
+       obj.GetComponent<ProjectileController>().AssignDamage(modifiedDmg);
+    }
+
+    private float CalculateDmg()
     {
         // Returns
-        if (currentCharge == maxChargeAmt || !attackIsHeld) return;
+        if (currentCharge == maxChargeAmt || !attackIsHeld) return 0f;
 
 
         if (chargeDmgMultiplier < 1)
@@ -90,6 +136,7 @@ public class PlayerAttackController : MonoBehaviour
 
         chargeDmgMultiplier += currentCharge;
         modifiedDmg = chargeDmgMultiplier * (baseDmg + damageModifier);
+        return modifiedDmg;
 
     }
 
@@ -102,4 +149,6 @@ public class PlayerAttackController : MonoBehaviour
             // do special indicator/sound!
         }
     }
+    #endregion
+
 }

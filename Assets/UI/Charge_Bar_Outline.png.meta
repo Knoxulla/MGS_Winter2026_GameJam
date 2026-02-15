@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 87bcf0a61918cac49930422ecf7b6485
+guid: 714dc6fc1e541be48a621be3a1ecbc56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1223583005434814592
-    second: chargeIndicator_0
+      213: -6677648818282375051
+    second: Charge_Bar_Outline_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chargeIndicator_0
+      name: Charge_Bar_Outline_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 48
+        x: 4
+        y: 5
+        width: 23
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08f5ad74db5f40fe0800000000000000
-      internalID: -1223583005434814592
+      spriteID: 578d87b87c93453a0800000000000000
+      internalID: -6677648818282375051
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 48267883184e8c3428bc4985df8487fd
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chargeIndicator_0: -1223583005434814592
+      Charge_Bar_Outline_0: -6677648818282375051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 87bcf0a61918cac49930422ecf7b6485
+guid: 68e7d1e7c9d4d61439a517e7a6c319bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1223583005434814592
-    second: chargeIndicator_0
+      213: 3912490384911331326
+    second: Player_Placeholder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chargeIndicator_0
+      name: Player_Placeholder_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 48
+        width: 27
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08f5ad74db5f40fe0800000000000000
-      internalID: -1223583005434814592
+      spriteID: eff65cb9645fb4630800000000000000
+      internalID: 3912490384911331326
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 48267883184e8c3428bc4985df8487fd
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chargeIndicator_0: -1223583005434814592
+      Player_Placeholder_0: 3912490384911331326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
