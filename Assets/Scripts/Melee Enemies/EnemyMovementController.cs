@@ -5,12 +5,12 @@ public class EnemyMovementController : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    [SerializeField]
-    private float rotationSpeed;
-
     private Rigidbody2D rb;
     private PlayerDetectionController playerDetectionController;
     private Vector2 targetDirection;
+
+    [SerializeField]
+    SpriteRenderer spriteRenderer;
 
     void Awake()
     {
@@ -19,10 +19,9 @@ public class EnemyMovementController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         UpdateTargetDirection();
-        RotateTowardsTarget();
         SetVelocity();
     }
 
@@ -38,19 +37,6 @@ public class EnemyMovementController : MonoBehaviour
         }
     }
 
-    private void RotateTowardsTarget()
-    {
-        if (targetDirection == Vector2.zero)
-        {
-            return;
-        } 
-        
-        Quaternion targetRotation = Quaternion.LookRotation(transform.forward, targetDirection);
-        Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-        rb.SetRotation(rotation);
-    }
-
     private void SetVelocity()
     {
         if (targetDirection == Vector2.zero)
@@ -59,7 +45,17 @@ public class EnemyMovementController : MonoBehaviour
         }
         else
         {
-            rb.linearVelocity = transform.up * speed; 
+            rb.linearVelocity = targetDirection.normalized * speed; 
+        }
+
+        
+        if (targetDirection.x > 0f)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (targetDirection.x < 0f)
+        {
+            spriteRenderer.flipX = false;
         }
     }
 }
