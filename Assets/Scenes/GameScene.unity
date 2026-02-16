@@ -963,11 +963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5122829362617151349, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.098
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5122829362617151349, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 5122829362617151349, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -1027,15 +1027,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6523498350433673548, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367397773535108848, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367397773535108848, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 7367397773535108848, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1284763960223518003, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
+      objectReference: {fileID: 6407001159706842955, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
     - target: {fileID: 7367397773535108848, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_SortingOrder
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367397773535108848, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7724148279692848592, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: anim
