@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackController
   baseDmg: 1
   damageModifier: 0
+  modifiedDmg: 0
   slowPerFrame: 0.01
   speedUpPerFrame: 0.03
   currentCharge: 0
@@ -758,10 +759,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6140031443026380546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.4, y: 1.3}
-  m_SizeDelta: {x: 23, y: 40}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1, y: 0.099998474}
+  m_SizeDelta: {x: -68, y: -52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8082715282449937841
 CanvasRenderer:

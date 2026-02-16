@@ -31,13 +31,14 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] Transform projectileSpawnPoint;
 
     bool attackIsHeld = false;
-    
 
+    public Vector2 mousePos;
     #endregion
 
     private void Start()
     {
         originalSPD = PlayerMASTER.Instance.playerMovementController.adjustedSpeed;
+        mousePos = Vector2.zero;
     }
 
     private void FixedUpdate()
@@ -80,7 +81,7 @@ public class PlayerAttackController : MonoBehaviour
 
     public void OnLook(InputAction.CallbackContext ctx)
     { 
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
+         mousePos = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
         //LookAt(Vector3.zero);
         LookAt(mousePos);
     }
