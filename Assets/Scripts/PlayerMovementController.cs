@@ -11,9 +11,6 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] AnimationClip walkLeft;
     [SerializeField] AnimationClip walkRight;
 
-    const string MOUSE_POSX_KEY = "mousePosX";
-    const string MOUSE_POSY_KEY = "mousePosY";
-
     Vector2 input;
     private float speed = 10;
 
@@ -24,6 +21,7 @@ public class PlayerMovementController : MonoBehaviour
         input = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void Update()
     {
         rb.AddForce(input * (speed * adjustedSpeed));

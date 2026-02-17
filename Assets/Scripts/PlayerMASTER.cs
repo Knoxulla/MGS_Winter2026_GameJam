@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class PlayerMASTER : MonoBehaviour
 {
-    public static PlayerMASTER Instance;
+    public static PlayerMASTER Instance { get; private set; }
 
     public PlayerAttackController playerAttackController;
     public PlayerMovementController playerMovementController;
+    public PlayerHealthController playerHealthController;
 
 
     private void Awake()
@@ -13,7 +14,6 @@ public class PlayerMASTER : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this);
         }
         else 
         {
@@ -25,5 +25,6 @@ public class PlayerMASTER : MonoBehaviour
     {
         playerAttackController = GetComponent<PlayerAttackController>();
         playerMovementController = GetComponent<PlayerMovementController>();
+        playerHealthController = GetComponent<PlayerHealthController>();
     }
 }
