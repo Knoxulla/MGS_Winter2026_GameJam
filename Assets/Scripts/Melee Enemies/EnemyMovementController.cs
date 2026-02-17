@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EnemyMovementController : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
+    private float speed = 2;
+    public float speedMulti = 1;
 
     private Rigidbody2D rb;
     private PlayerDetectionController playerDetectionController;
@@ -45,7 +45,7 @@ public class EnemyMovementController : MonoBehaviour
         }
         else
         {
-            rb.linearVelocity = targetDirection.normalized * speed; 
+            rb.linearVelocity = targetDirection.normalized * speed * speedMulti; 
         }
 
         
@@ -57,5 +57,10 @@ public class EnemyMovementController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+    }
+
+        public void SpeedMultiplier(float newSpeedMulti)
+    {
+        speedMulti = Mathf.Clamp(newSpeedMulti,0.01f, 10f);
     }
 }
