@@ -52,11 +52,13 @@ public class EnemyMovementController : MonoBehaviour
         }
 
         
-        if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position, transform.position) > 1f)
+        if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position, transform.position) > 1f
+             && targetDirection.normalized.x > 0.5f)
         {
             spriteRenderer.flipX = true;    
         }
-        else if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position,transform.position) < -1f)
+        else if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position,transform.position) > 1f
+            && targetDirection.normalized.x < 0.5f)
         {
             spriteRenderer.flipX = false;
         }
