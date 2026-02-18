@@ -1,4 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
+using UnityEngine.Splines;
 
 public class EnemyMovementController : MonoBehaviour
 {
@@ -49,11 +52,11 @@ public class EnemyMovementController : MonoBehaviour
         }
 
         
-        if (targetDirection.x > 0f)
+        if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position, transform.position) > 1f)
         {
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = true;    
         }
-        else if (targetDirection.x < 0f)
+        else if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position,transform.position) < -1f)
         {
             spriteRenderer.flipX = false;
         }
