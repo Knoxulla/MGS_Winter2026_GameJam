@@ -24,13 +24,17 @@ public class EnemyAttackController : MonoBehaviour
         {
             col2D.enabled = true;
         }
-
+        else
+        {
+            col2D.enabled = false;
+        } 
+        
         timer += Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")  && timer >= attackCd)
+        if (other.gameObject.CompareTag("Player"))
         {
             PerformAttack(other);
         }
@@ -39,8 +43,7 @@ public class EnemyAttackController : MonoBehaviour
     void PerformAttack(Collider2D other)
     {
         timer = 0;
-        var playerHealthController = other.gameObject.GetComponent<PlayerHealthController>();
-        playerHealthController.UpdateHealth(dmg*dmgMulti);
-        col2D.enabled = false;
+        PlayerHealthController playerHealthController = other.gameObject.GetComponent<PlayerHealthController>();
+        playerHealthController.UpdateHealth(playerHealthController.currentHealth - dmg*dmgMulti);
     }
 }

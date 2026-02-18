@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 220205573}
   - component: {fileID: 220205572}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Tilesets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1239,8 +1239,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7459,6 +7459,38 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3912490384911331326, guid: 68e7d1e7c9d4d61439a517e7a6c319bd, type: 3}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598495075845755065, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7528,6 +7560,10 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1970676485}
+    - target: {fileID: 7724148279692848592, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
