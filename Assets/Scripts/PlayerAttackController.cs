@@ -8,6 +8,7 @@ public class PlayerAttackController : MonoBehaviour
     #region Variables
     [Header("Damage")]
     [SerializeField] float baseDmg = 1;
+    [SerializeField] float minDmg = 10;
     [SerializeField, Tooltip("additive damage modifer to be modified by powerUps")] float damageModifier = 0;
     [SerializeField, Tooltip("Automatically changes, this is just so it can be viewed")] float modifiedDmg = 0f;
 
@@ -21,7 +22,6 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] float maxChargeAmt = 1f;
     [SerializeField] float chargeAddedPerFrame = 0.2f;
     [SerializeField] float chargeRemovedPerFrame = 0.5f;
-    [SerializeField] float chargeDmgMultiplier = 1f;
 
     [SerializeField] Image chargeIndicator;
 
@@ -73,8 +73,8 @@ public class PlayerAttackController : MonoBehaviour
         currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeAmt);
 
         UpdateChargeIndicator();
-        CalculateDmg();
-
+        modifiedDmg = CalculateDmg();
+        
     }
 
     #region Aim
@@ -110,7 +110,7 @@ public class PlayerAttackController : MonoBehaviour
         else if (ctx.canceled)
         {
             attackIsHeld = false;
-            chargeDmgMultiplier = 0;
+            currentCharge = 0;
 
             // Do Attack
             PerformAttack();
@@ -120,23 +120,27 @@ public class PlayerAttackController : MonoBehaviour
     private void PerformAttack()
     {
        GameObject obj = Instantiate(projectile, projectileSpawnPoint);
-
-       obj.GetComponent<ProjectileController>().AssignDamage(modifiedDmg);
+        obj.GetComponent<ProjectileController>().AssignDamage(modifiedDmg);
     }
 
     private float CalculateDmg()
     {
         // Returns
-        if (currentCharge == maxChargeAmt || !attackIsHeld) return 0f;
+        if (!attackIsHeld) return 0f;
 
 
-        if (chargeDmgMultiplier < 1)
+        if (currentCharge < 1)
         {
-            chargeDmgMultiplier = 1;
+            currentCharge = 1;
         }
 
-        chargeDmgMultiplier += currentCharge;
-        modifiedDmg = chargeDmgMultiplier * (baseDmg + damageModifier);
+        modifiedDmg = currentCharge * (baseDmg + damageModifier);
+
+        if (modifiedDmg < minDmg)
+        {
+            modifiedDmg = minDmg;
+        }
+
         return modifiedDmg;
 
     }
