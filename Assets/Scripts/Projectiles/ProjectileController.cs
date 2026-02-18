@@ -35,6 +35,16 @@ public class ProjectileController : MonoBehaviour
         timer += Time.deltaTime;
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            
+            var enemyHealthController = collision.gameObject.GetComponent<EnemyHealthController>();
+            enemyHealthController.takeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
 
     public void AssignTarget(Transform transform)
     { 

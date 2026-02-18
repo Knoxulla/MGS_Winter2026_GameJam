@@ -12,7 +12,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] AnimationClip walkRight;
 
     Vector2 input;
-    private float speed = 10;
+    [SerializeField] private float speed = 10;
 
     public float adjustedSpeed = 1f;
 

@@ -10,9 +10,20 @@ public class EnemyAttackController : MonoBehaviour
     
     public float attackCd;
 
+    private CircleCollider2D col2D;
+
+    void Start()
+    {
+        col2D = GetComponent<CircleCollider2D>();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (timer >= attackCd)
+        {
+            col2D.enabled = true;
+        }
 
         timer += Time.deltaTime;
     }
@@ -21,12 +32,15 @@ public class EnemyAttackController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")  && timer >= attackCd)
         {
-            PerformAttack();
+            PerformAttack(other);
         }
     }
 
-    void PerformAttack()
+    void PerformAttack(Collider2D other)
     {
         timer = 0;
+        var playerHealthController = other.gameObject.GetComponent<PlayerHealthController>();
+        playerHealthController.UpdateHealth(dmg*dmgMulti);
+        col2D.enabled = false;
     }
 }

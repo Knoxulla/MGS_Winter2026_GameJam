@@ -1,0 +1,32 @@
+using UnityEngine;
+
+public class EnemyHealthController : MonoBehaviour
+{
+    [SerializeField] public float maxHealth = 10;
+    [SerializeField] public float currentHealth = 10;
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        checkDeath();
+    }
+
+    public void takeDamage(float damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public void checkDeath()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+}
