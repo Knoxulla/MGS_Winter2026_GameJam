@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2914608251412166843}
   - component: {fileID: 9140813678010314249}
   - component: {fileID: 7724148279692848592}
-  - component: {fileID: 3497412998525769773}
+  - component: {fileID: 719909340433396101}
   - component: {fileID: 8918169551643806228}
   - component: {fileID: 3753692147945354900}
   - component: {fileID: 3329043940688218347}
@@ -58,7 +58,7 @@ MonoBehaviour:
   playerAttackController: {fileID: 8918169551643806228}
   playerMovementController: {fileID: 7724148279692848592}
   playerHealthController: {fileID: 9140813678010314249}
-  playerExperienceController: {fileID: 3497412998525769773}
+  playerExperienceController: {fileID: 719909340433396101}
 --- !u!114 &9140813678010314249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   walkRight: {fileID: 7624658416883487128, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
   speed: 100
   adjustedSpeed: 1
---- !u!114 &3497412998525769773
+--- !u!114 &719909340433396101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
