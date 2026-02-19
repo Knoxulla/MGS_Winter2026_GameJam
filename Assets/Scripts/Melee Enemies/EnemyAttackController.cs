@@ -5,6 +5,7 @@ public class EnemyAttackController : MonoBehaviour
     [SerializeField]
     private float dmg = 1;
     public float dmgMulti = 1;
+    public float finalDmg= 1;
 
     public float timer = 0;
     
@@ -43,7 +44,8 @@ public class EnemyAttackController : MonoBehaviour
     void PerformAttack(Collider2D other)
     {
         timer = 0;
+        finalDmg = dmg * dmgMulti;
         PlayerHealthController playerHealthController = other.gameObject.GetComponent<PlayerHealthController>();
-        playerHealthController.UpdateHealth(playerHealthController.currentHealth - dmg*dmgMulti);
+        playerHealthController.UpdateHealth(playerHealthController.currentHealth - finalDmg);
     }
 }

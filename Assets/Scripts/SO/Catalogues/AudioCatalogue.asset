@@ -1,0 +1,388 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b32965e039caa4d8cee9f05e3ebe51, type: 3}
+  m_Name: AudioCatalogue
+  m_EditorClassIdentifier: 
+  MUS_Sounds:
+    <ForlornExodus>k__BackingField:
+      Guid:
+        Data1: 1965326174
+        Data2: 1330222297
+        Data3: 1742404011
+        Data4: -2068052019
+      Path: event:/MUS/ForlornExodus
+    <FromMarlika>k__BackingField:
+      Guid:
+        Data1: -55142107
+        Data2: 1190106228
+        Data3: -980974208
+        Data4: -869818867
+      Path: event:/MUS/FromMarlikaWithLove
+    <Morgale>k__BackingField:
+      Guid:
+        Data1: 1042399749
+        Data2: 1101340574
+        Data3: 499864247
+        Data4: -625386989
+      Path: event:/MUS/Morgale
+    <ProtosAndArchie>k__BackingField:
+      Guid:
+        Data1: 1806035102
+        Data2: 1251465888
+        Data3: 212592052
+        Data4: -1003825412
+      Path: event:/MUS/ProtosAndArchie
+    <RogueArchose>k__BackingField:
+      Guid:
+        Data1: -1964231835
+        Data2: 1230870546
+        Data3: -199708287
+        Data4: -1704430024
+      Path: event:/MUS/RogueArchose
+  UI_Sounds:
+    <Select>k__BackingField:
+      Guid:
+        Data1: -673881093
+        Data2: 1189595081
+        Data3: 1505060238
+        Data4: 1775607021
+      Path: event:/SFX/UI/Select
+    <Hover>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <Pause>k__BackingField:
+      Guid:
+        Data1: 69009346
+        Data2: 1200528307
+        Data3: 629961644
+        Data4: 1394317588
+      Path: event:/SFX/UI/Pause
+    <Cancel>k__BackingField:
+      Guid:
+        Data1: 1084496727
+        Data2: 1153103794
+        Data3: 1977269949
+        Data4: 1438485396
+      Path: event:/SFX/UI/Cancel
+  Player_Sounds:
+    <ArchieEvents>k__BackingField:
+      <Attack_Swing>k__BackingField:
+        Guid:
+          Data1: 1136307660
+          Data2: 1335072696
+          Data3: 478257550
+          Data4: 2046268961
+        Path: event:/SFX/Player/Archie/AttackSwing
+      <Attack_Hit>k__BackingField:
+        Guid:
+          Data1: -1711925071
+          Data2: 1261420704
+          Data3: -920281923
+          Data4: 150775202
+        Path: event:/SFX/Player/Archie/AttackHit
+      <Hurt>k__BackingField:
+        Guid:
+          Data1: 1083833604
+          Data2: 1073923457
+          Data3: -935461462
+          Data4: 1492922343
+        Path: event:/SFX/Player/Archie/Hurt
+      <Death>k__BackingField:
+        Guid:
+          Data1: -517691766
+          Data2: 1326448682
+          Data3: 339829394
+          Data4: -268627933
+        Path: event:/SFX/Player/Death
+      <Walksteps>k__BackingField:
+        Guid:
+          Data1: -1791579090
+          Data2: 1313282983
+          Data3: 1415379344
+          Data4: -459914568
+        Path: event:/SFX/Player/Archie/Walkstep
+      <Runsteps>k__BackingField:
+        Guid:
+          Data1: -952317077
+          Data2: 1202758980
+          Data3: -1449753465
+          Data4: 1604042975
+        Path: event:/SFX/Player/Archie/Runstep
+      <Dash>k__BackingField:
+        Guid:
+          Data1: 176284761
+          Data2: 1320763908
+          Data3: 1861207705
+          Data4: 560784766
+        Path: event:/SFX/Player/Archie/Dash
+    <SkribbleEvents>k__BackingField:
+      <Attack>k__BackingField:
+        Guid:
+          Data1: -667607407
+          Data2: 1239939308
+          Data3: 333587878
+          Data4: -1037444995
+        Path: event:/SFX/Player/Protos/ProjectileLaunch
+      <Hurt>k__BackingField:
+        Guid:
+          Data1: -1537455494
+          Data2: 1225589215
+          Data3: -1696804438
+          Data4: 1490694482
+        Path: event:/SFX/Player/Protos/Hurt
+      <Death>k__BackingField:
+        Guid:
+          Data1: -517691766
+          Data2: 1326448682
+          Data3: 339829394
+          Data4: -268627933
+        Path: event:/SFX/Player/Death
+    <SkribbleSwitchEvent>k__BackingField:
+      Guid:
+        Data1: 477789846
+        Data2: 1251635746
+        Data3: 823277733
+        Data4: 1577885478
+      Path: event:/SFX/Player/SkribbleSwitch
+    <HitboxChargeReady>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <PlayerHealed>k__BackingField:
+      Guid:
+        Data1: -1807198971
+        Data2: 1315126340
+        Data3: 254061223
+        Data4: 589992583
+      Path: event:/SFX/Player/PlayerHealed
+    <PlayerHealthCapped>k__BackingField:
+      Guid:
+        Data1: 341009706
+        Data2: 1272221771
+        Data3: -388901499
+        Data4: -2112687727
+      Path: event:/SFX/Player/HealthCapped
+    <FaithGained>k__BackingField:
+      Guid:
+        Data1: 1734065105
+        Data2: 1339640158
+        Data3: 744459434
+        Data4: 1352366280
+      Path: event:/SFX/Pickups/FaithGenerate
+    <FaithCapped>k__BackingField:
+      Guid:
+        Data1: 1942501648
+        Data2: 1282685796
+        Data3: 306842519
+        Data4: -664555874
+      Path: event:/SFX/Pickups/FaithCapped
+    <CurrencyGained>k__BackingField:
+      Guid:
+        Data1: 1279226461
+        Data2: 1298024975
+        Data3: 1355442848
+        Data4: 1368087217
+      Path: event:/SFX/Pickups/CurrencyPicked
+    <BatteryPickedUp>k__BackingField:
+      Guid:
+        Data1: 477438648
+        Data2: 1244159299
+        Data3: -1764426576
+        Data4: 1801320321
+      Path: event:/SFX/Pickups/BatteryPickedUp
+  Enemy_Sounds:
+    <CoreEvents>k__BackingField:
+      <CoreActivate>k__BackingField:
+        Guid:
+          Data1: -516440237
+          Data2: 1324589526
+          Data3: 480779448
+          Data4: -759779507
+        Path: event:/SFX/Enemy/Core/Activate
+      <StaffClang>k__BackingField:
+        Guid:
+          Data1: -187990801
+          Data2: 1084323693
+          Data3: -934800723
+          Data4: -2030536293
+        Path: event:/SFX/Enemy/Core/StaffClang
+      <HzAmbiance>k__BackingField:
+        Guid:
+          Data1: 213766553
+          Data2: 1095880573
+          Data3: 1255512448
+          Data4: 140284093
+        Path: event:/SFX/Enemy/Core/HzAmbiance
+      <CoreHurt>k__BackingField:
+        Guid:
+          Data1: -209209764
+          Data2: 1322507428
+          Data3: 246298780
+          Data4: -281038201
+        Path: event:/SFX/Enemy/Core/Hurt
+      <CoreAttack>k__BackingField:
+        Guid:
+          Data1: 3424374
+          Data2: 1088579694
+          Data3: -429130079
+          Data4: 430307299
+        Path: event:/SFX/Enemy/Core/ProjectileLaunch
+      <CoreDeath>k__BackingField:
+        Guid:
+          Data1: -422803190
+          Data2: 1186335887
+          Data3: 1518092693
+          Data4: 646968148
+        Path: event:/SFX/Enemy/Core/Death
+      <CoreDeactive>k__BackingField:
+        Guid:
+          Data1: 1793779560
+          Data2: 1162488560
+          Data3: 718728340
+          Data4: 1498169571
+        Path: event:/SFX/Enemy/Core/Deactivate
+    <WolfEvents>k__BackingField:
+      <WolfIdle>k__BackingField:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+      <WolfMove>k__BackingField:
+        Guid:
+          Data1: 950897054
+          Data2: 1211115023
+          Data3: -1074242658
+          Data4: 114809336
+        Path: event:/SFX/Enemy/Wolf/Movement
+      <WolfWindup>k__BackingField:
+        Guid:
+          Data1: 802328024
+          Data2: 1216560996
+          Data3: 1484273339
+          Data4: -1384416739
+        Path: event:/SFX/Enemy/Wolf/Windup
+      <WolfLunge>k__BackingField:
+        Guid:
+          Data1: 1206386398
+          Data2: 1325782501
+          Data3: 1587512245
+          Data4: 622729405
+        Path: event:/SFX/Enemy/Wolf/Lunge
+      <WolfHurt>k__BackingField:
+        Guid:
+          Data1: 1297627026
+          Data2: 1189453171
+          Data3: -1285279848
+          Data4: 529857609
+        Path: event:/SFX/Enemy/Wolf/Hurt
+      <WolfDeath>k__BackingField:
+        Guid:
+          Data1: -531502647
+          Data2: 1222868231
+          Data3: 1299311256
+          Data4: -1896061998
+        Path: event:/SFX/Enemy/Wolf/Death
+  World_Sounds:
+    <BoulderHit>k__BackingField:
+      Guid:
+        Data1: 334191454
+        Data2: 1101554713
+        Data3: -844047978
+        Data4: 1963401047
+      Path: event:/SFX/World/BoulderHit
+    <BoulderBreak>k__BackingField:
+      Guid:
+        Data1: -1173963015
+        Data2: 1283318392
+        Data3: 223122317
+        Data4: 29978836
+      Path: event:/SFX/World/BoulderBreak
+    <MetalBang>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <BatteryInserted>k__BackingField:
+      Guid:
+        Data1: -430596954
+        Data2: 1189077753
+        Data3: -1900859506
+        Data4: -2112211680
+      Path: event:/SFX/World/BatteryUsed
+    <HzCyan_Loop>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <HzGreen_Loop>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <ProjectileAudioEvents>k__BackingField:
+      <HzGreen_GenericFire>k__BackingField:
+        Guid:
+          Data1: -1982222134
+          Data2: 1200018926
+          Data3: -775268423
+          Data4: -1214810800
+        Path: event:/SFX/Projectiles/Hz3142_GenericFire
+      <HzGreen_ProjectileBreak>k__BackingField:
+        Guid:
+          Data1: -82919271
+          Data2: 1148331617
+          Data3: 1527502228
+          Data4: 1595973460
+        Path: event:/SFX/Projectiles/Hz3142_Break
+      <HzGreen_ExplosionBreak>k__BackingField:
+        Guid:
+          Data1: 517884890
+          Data2: 1268207428
+          Data3: 583465610
+          Data4: 1077508822
+        Path: event:/SFX/Projectiles/Hz3142_Explosion
+      <HzCyan_GenericFire>k__BackingField:
+        Guid:
+          Data1: 1595303425
+          Data2: 1225599323
+          Data3: 856850865
+          Data4: -478192789
+        Path: event:/SFX/Projectiles/Hz2413_Break
+      <HzCyan_ProjectileBreak>k__BackingField:
+        Guid:
+          Data1: 1595303425
+          Data2: 1225599323
+          Data3: 856850865
+          Data4: -478192789
+        Path: event:/SFX/Projectiles/Hz2413_Break
+      <HzCyan_ExplosionBreak>k__BackingField:
+        Guid:
+          Data1: -1905646741
+          Data2: 1143810303
+          Data3: -507345525
+          Data4: -1461408591
+        Path: event:/SFX/Projectiles/Hz2413_Explosion

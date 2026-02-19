@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8ec5122cb450c4b922d84076e4c9e5, type: 3}
+  m_Name: Mini-CorePatterns
+  m_EditorClassIdentifier: 
+  attackSequences:
+  - attack: {fileID: 11400000, guid: 6dc4eebf391df1e4188fcb77d22b6cde, type: 2}
+    chanceToHappen: 20
+  - attack: {fileID: 11400000, guid: 41c51032dab12174abe55db93401341a, type: 2}
+    chanceToHappen: 20
+  - attack: {fileID: 11400000, guid: 4c48acf18492a9d409e4a6ce53406b35, type: 2}
+    chanceToHappen: 45
+  - attack: {fileID: 11400000, guid: 4ad31b4b90638484db61580b4633690c, type: 2}
+    chanceToHappen: 15
+  timeBetweenAttacks: 0

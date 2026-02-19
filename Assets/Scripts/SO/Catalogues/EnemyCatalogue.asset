@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce82351c0a28fc74392b8450977cdea9, type: 3}
+  m_Name: EnemyCatalogue
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyID: 0
+    Name: Core
+    enemyIcon: {fileID: 379483628, guid: b0f81518fda040042aa6b81351e66c28, type: 3}
+    enemy: {fileID: 5816426099640242064, guid: ac2365af0589d5242b7141bb811444fe, type: 3}
+    description: A powerful core unit.
+    <EnemyHead>k__BackingField: {fileID: 5375445255780559538, guid: ac2365af0589d5242b7141bb811444fe, type: 3}
+    <MaxPoolCount>k__BackingField: 30
+    <Base_RespawnTimerSeconds>k__BackingField: 10
+  - enemyID: 1
+    Name: Wolf
+    enemyIcon: {fileID: 42971839, guid: 4ec9326d51b2adf48aaba3f7e5494156, type: 3}
+    enemy: {fileID: 5816426099640242064, guid: 68fc0591e71822d4ab90199a225077f2, type: 3}
+    description: A fierce wolf-like enemy.
+    <EnemyHead>k__BackingField: {fileID: 5375445255780559538, guid: 68fc0591e71822d4ab90199a225077f2, type: 3}
+    <MaxPoolCount>k__BackingField: 50
+    <Base_RespawnTimerSeconds>k__BackingField: 5
+  - enemyID: 2
+    Name: LargeWolf
+    enemyIcon: {fileID: 42971839, guid: 4ec9326d51b2adf48aaba3f7e5494156, type: 3}
+    enemy: {fileID: 4048364105921208842, guid: c88ea103db9e5da4fa9e76047ccba44c, type: 3}
+    description: A fierce wolf-like enemy.
+    <EnemyHead>k__BackingField: {fileID: 2454426573250873128, guid: c88ea103db9e5da4fa9e76047ccba44c, type: 3}
+    <MaxPoolCount>k__BackingField: 10
+    <Base_RespawnTimerSeconds>k__BackingField: 15
+  - enemyID: 3
+    Name: FracturedCore
+    enemyIcon: {fileID: -1044391050, guid: 28bffa2bc0c81fb4689d0ea16928637c, type: 3}
+    enemy: {fileID: 6435720005197727589, guid: d5c7aaf67c885da47894c258122943d2, type: 3}
+    description: Literal hell across The Worlds Aplenty
+    <EnemyHead>k__BackingField: {fileID: 4859726484810129991, guid: d5c7aaf67c885da47894c258122943d2, type: 3}
+    <MaxPoolCount>k__BackingField: 2
+    <Base_RespawnTimerSeconds>k__BackingField: 60
+  - enemyID: 4
+    Name: MiniCore
+    enemyIcon: {fileID: -1279194051, guid: b0f81518fda040042aa6b81351e66c28, type: 3}
+    enemy: {fileID: 7224954076235873213, guid: d56b337d8c96a464a8b7326790ae288f, type: 3}
+    description: A rock, that's extremely annoying and in your way
+    <EnemyHead>k__BackingField: {fileID: 9107759702104170143, guid: d56b337d8c96a464a8b7326790ae288f, type: 3}
+    <MaxPoolCount>k__BackingField: 3
+    <Base_RespawnTimerSeconds>k__BackingField: 0
+  - enemyID: 4
+    Name: Rock (Cover)
+    enemyIcon: {fileID: -451990237, guid: dc75c6dc790be834299b19e94a915cea, type: 3}
+    enemy: {fileID: 6303393998405848155, guid: 79d82159a637fd74486e4d6284ea91d6, type: 3}
+    description: A rock, maybe it can be used for cover?
+    <EnemyHead>k__BackingField: {fileID: 9189888477966495357, guid: 79d82159a637fd74486e4d6284ea91d6, type: 3}
+    <MaxPoolCount>k__BackingField: 10
+    <Base_RespawnTimerSeconds>k__BackingField: 0
+  - enemyID: 5
+    Name: Large Rock (Barrier)
+    enemyIcon: {fileID: -451990237, guid: dc75c6dc790be834299b19e94a915cea, type: 3}
+    enemy: {fileID: 1448595737012460263, guid: 5a4f7d6bbe1a7d540a3e145cab07a92c, type: 3}
+    description: A rock, that's extremely annoying and in your way
+    <EnemyHead>k__BackingField: {fileID: 4389144544507033793, guid: 5a4f7d6bbe1a7d540a3e145cab07a92c, type: 3}
+    <MaxPoolCount>k__BackingField: 10
+    <Base_RespawnTimerSeconds>k__BackingField: 0
+  - enemyID: 6
+    Name: Medium Rock (Barrier)
+    enemyIcon: {fileID: -451990237, guid: dc75c6dc790be834299b19e94a915cea, type: 3}
+    enemy: {fileID: 7043149530305283921, guid: ef3e5e216a260184991eb87307012d28, type: 3}
+    description: A rock, that's extremely annoying and in your way
+    <EnemyHead>k__BackingField: {fileID: 5281990907579917687, guid: ef3e5e216a260184991eb87307012d28, type: 3}
+    <MaxPoolCount>k__BackingField: 10
+    <Base_RespawnTimerSeconds>k__BackingField: 0

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3f6db9729843e4d95fe395c97e3025, type: 3}
+  m_Name: SharpBullet_REDDE
+  m_EditorClassIdentifier: 
+  bulletSprite: {fileID: 346328405, guid: f304cf079dc17214aad8362cbd7d04b8, type: 3}
+  modifySize: 1
+  bulletSizeModifier: 1.25
+  spriteSizeModifier: 1.25
+  bulletType: 0
+  damageAmount: 1
+  bulletPattern: {fileID: 11400000, guid: 192ab8154b42dd84ab1ce028aaac244d, type: 2}
+  delayBetween: 0
+  <FreezeFramesOnDeath>k__BackingField: 0
+  <FireSound>k__BackingField:
+    Guid:
+      Data1: 3424374
+      Data2: 1088579694
+      Data3: -429130079
+      Data4: 430307299
+    Path: event:/SFX/Enemy/Core/ProjectileLaunch
+  <BreakSound>k__BackingField:
+    Guid:
+      Data1: 1595303425
+      Data2: 1225599323
+      Data3: 856850865
+      Data4: -478192789
+    Path: event:/SFX/Projectiles/Hz2413_Break
+  <LightingColor>k__BackingField: {r: 1, g: 0, b: 0, a: 1}
+  <LightIntensity>k__BackingField: 1
+  <SummonParticle>k__BackingField: {fileID: 11400000, guid: 497cc041693cddc44b5dfc65793fc091, type: 2}
+  <BreakParticle>k__BackingField: {fileID: 11400000, guid: f72f2ea4be9aa3f4c9a0d3ad535318b9, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef29607e20cde2746ac447e6948ed224, type: 3}
+  m_Name: Core_LongRange
+  m_EditorClassIdentifier: 
+  <Attack_Name>k__BackingField: Core_LongRange
+  <Attack_Priority>k__BackingField: 3
+  <ScanRadius>k__BackingField: 6
+  <FreezePathing_WhileAttacking>k__BackingField: 0
+  <Controller_Cooldown>k__BackingField: 0
+  <RadiusGizmoColor>k__BackingField: {r: 0.40396938, g: 0.9622642, b: 0.8927418, a: 0.8784314}
+  <DrawGizmoRadius>k__BackingField: 1

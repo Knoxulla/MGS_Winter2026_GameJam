@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3fcd7a3e6c32a46877190b3700c83b, type: 3}
+  m_Name: Extra1
+  m_EditorClassIdentifier: 
+  bulletSO: {fileID: 11400000, guid: f2ce64efc09120d4fae97a3225b2318c, type: 2}
+  patternType: 3
+  allegiance: 0
+  bulletSpeed: 3.5
+  patternLifetime: 1
+  player_aimed: 1
+  defaultDirection: {x: 0, y: 0}
+  windUpTime: 0
+  spreadAngle: 60
+  spawnLocation: {x: 0, y: 0}
+  spawnDistance: 0
+  angleOffset: 0
+  bulletsToFire: 4
+  loop: 1
+  numberOfInstances: 3
+  delayBetween: 1
+  clockwiseSpiral: 1
+  bulletDelay: 0.05
+  useBezierPath: 0
+  keepMoving: 1
+  calculatePath: 1
+  pathRelativeToPlayer: 0
+  pathSelectionMode: 0
+  bezierPaths: []
+  pathWeights: []

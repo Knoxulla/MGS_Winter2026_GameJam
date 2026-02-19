@@ -3,14 +3,14 @@ using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class PlayerAttackController : MonoBehaviour
+public class PlayerAttackController : BulletSpawner
 {
     #region Variables
     [Header("Damage")]
     [SerializeField] float baseDmg = 1;
     [SerializeField] float minDmg = 10;
     [SerializeField, Tooltip("additive damage modifer to be modified by powerUps")] float damageModifier = 0;
-    [SerializeField, Tooltip("Automatically changes, this is just so it can be viewed")] float modifiedDmg = 0f;
+    [Tooltip("Automatically changes, this is just so it can be viewed")] public float modifiedDmg = 0f;
 
     [Header("Speed")]
     [SerializeField] float slowPerFrame = 0.01f;
@@ -26,8 +26,8 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] Image chargeIndicator;
 
     [Header("Aim")]
-    [SerializeField] GameObject aimObject;
-    [SerializeField] GameObject projectile;
+    [SerializeField] public GameObject aimObject;
+    [SerializeField] public GameObject aimArrow;
     [SerializeField] Transform projectileSpawnPoint;
 
     bool attackIsHeld = false;
@@ -119,8 +119,8 @@ public class PlayerAttackController : MonoBehaviour
 
     private void PerformAttack()
     {
-       GameObject obj = Instantiate(projectile, projectileSpawnPoint);
-        obj.GetComponent<ProjectileController>().AssignDamage(modifiedDmg);
+        // GameObject obj = Instantiate(projectile, projectileSpawnPoint);
+        TriggerAttack();
     }
 
     private float CalculateDmg()

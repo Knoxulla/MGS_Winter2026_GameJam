@@ -88,7 +88,7 @@ MonoBehaviour:
   walkDown: {fileID: 3374613219183224518, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
   walkLeft: {fileID: -5053880946443293090, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
   walkRight: {fileID: 7624658416883487128, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  speed: 5
+  speed: 100
   adjustedSpeed: 1
 --- !u!114 &8918169551643806228
 MonoBehaviour:
@@ -102,7 +102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f51699190c128342ad26042baa2bfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackController
+  bulletPatterns: []
+  <BulletAllegiance>k__BackingField: 1
+  spawnPoint: {fileID: 5122829362617151349}
+  rotationOffset: 0
+  attackPattern: {fileID: 11400000, guid: 1bcad35991f870b4f885ababa4abb7c3, type: 2}
   baseDmg: 1
+  minDmg: 10
   damageModifier: 0.2
   modifiedDmg: 0
   slowPerFrame: 0.01
@@ -111,10 +117,10 @@ MonoBehaviour:
   maxChargeAmt: 20
   chargeAddedPerFrame: 0.5
   chargeRemovedPerFrame: 1
-  chargeDmgMultiplier: 0.2
   chargeIndicator: {fileID: 3373912378541751304}
   aimObject: {fileID: 5506515673238211498}
-  projectile: {fileID: 2438275153942175495, guid: 25166a4f159f85c40a8fa303cf9a1a0d, type: 3}
+  projectile: {fileID: 5680163752527077728, guid: ec0d2cb461edba347b3326231757cafb, type: 3}
+  projectileSO: {fileID: 11400000, guid: 12630797398b0234e8d94033d6318664, type: 2}
   projectileSpawnPoint: {fileID: 3729323538376315231}
   mousePos: {x: 0, y: 0}
 --- !u!114 &3753692147945354900

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bf891729d682f4ca281aa3ab3c05eb, type: 3}
+  m_Name: BeanbagOfFaith
+  m_EditorClassIdentifier: 
+  lootEntries:
+  - item:
+      itemID: 0
+      Name: Faith_Pickup
+      icon: {fileID: 21300000, guid: 080fda7f9e182fc499a073376b780364, type: 3}
+      description: 
+      hasMaxHoldAmt: 0
+      maxHoldAmt: 0
+      canBeEntity: 0
+      itemPrefab: {fileID: 0}
+      canBePickup: 1
+      Pickup: {fileID: 11400000, guid: 1f6a4bbbf5467bd4dbdc210016031344, type: 2}
+      <MinPickupValue>k__BackingField: 5
+      <MaxPickupValue>k__BackingField: 7
+      MinPickupCount: 12
+      MaxPickupCount: 32
+      <TimeBetweenSpawns>k__BackingField: {x: 0.01, y: 0.015}
+    dropChance: 100
+    quantity: 1

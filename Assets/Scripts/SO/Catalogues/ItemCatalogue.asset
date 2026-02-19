@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37bfe9e9f6b18948ad22ba23412f5c5, type: 3}
+  m_Name: ItemCatalogue
+  m_EditorClassIdentifier: 
+  items:
+  - itemID: 0
+    Name: Data Chip
+    icon: {fileID: -1229460536, guid: f79f3650d7ea658438275de47745b88a, type: 3}
+    description: The currency of the outpost
+    hasMaxHoldAmt: 0
+    maxHoldAmt: 0
+    canBeEntity: 1
+    itemPrefab: {fileID: 4544127013277150988, guid: 546ef9c0fc2c09e4a9c49793582f54cd, type: 3}
+    <PickupSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <UseSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}
+  - itemID: 1
+    Name: Battery
+    icon: {fileID: -440031341, guid: 4070f4a0ab8f6344696d20c153060398, type: 3}
+    description: Capsule of psychose energy that can be used to power Archamachines
+    hasMaxHoldAmt: 1
+    maxHoldAmt: 9
+    canBeEntity: 1
+    itemPrefab: {fileID: 584815052955436837, guid: ff8273c0dbe1a8743a0f5e897c66f994, type: 3}
+    <PickupSound>k__BackingField:
+      Guid:
+        Data1: 477438648
+        Data2: 1244159299
+        Data3: -1764426576
+        Data4: 1801320321
+      Path: event:/SFX/Pickups/BatteryPickedUp
+    <UseSound>k__BackingField:
+      Guid:
+        Data1: -430596954
+        Data2: 1189077753
+        Data3: -1900859506
+        Data4: -2112211680
+      Path: event:/SFX/World/BatteryUsed
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}
+  - itemID: 2
+    Name: Grigori's coin
+    icon: {fileID: 21300000, guid: f99bd4ee80ed08a42b1260e64b8419c4, type: 3}
+    description: One of Grigori's shiny coins
+    hasMaxHoldAmt: 1
+    maxHoldAmt: 5
+    canBeEntity: 1
+    itemPrefab: {fileID: 2495225704792886151, guid: 7fcbb4386c5386745b5d265f77cc82fc, type: 3}
+    <PickupSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <UseSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}
+  - itemID: 3
+    Name: Water
+    icon: {fileID: 21300000, guid: f99bd4ee80ed08a42b1260e64b8419c4, type: 3}
+    description: Water but this is a test item until further notice
+    hasMaxHoldAmt: 0
+    maxHoldAmt: 1
+    canBeEntity: 1
+    itemPrefab: {fileID: 2495225704792886151, guid: 7fcbb4386c5386745b5d265f77cc82fc, type: 3}
+    <PickupSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <UseSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}
+  - itemID: 4
+    Name: Clothes
+    icon: {fileID: 21300000, guid: f99bd4ee80ed08a42b1260e64b8419c4, type: 3}
+    description: Clothes but this is a test item until further notice
+    hasMaxHoldAmt: 0
+    maxHoldAmt: 4
+    canBeEntity: 1
+    itemPrefab: {fileID: 2495225704792886151, guid: 7fcbb4386c5386745b5d265f77cc82fc, type: 3}
+    <PickupSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <UseSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}
+  - itemID: 4
+    Name: FoodBag
+    icon: {fileID: 21300000, guid: f99bd4ee80ed08a42b1260e64b8419c4, type: 3}
+    description: Clothes but this is a test item until further notice
+    hasMaxHoldAmt: 0
+    maxHoldAmt: 4
+    canBeEntity: 1
+    itemPrefab: {fileID: 2495225704792886151, guid: 7fcbb4386c5386745b5d265f77cc82fc, type: 3}
+    <PickupSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <UseSound>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}
+  - itemID: 4
+    Name: Shard of Memories Lost
+    icon: {fileID: 21300000, guid: d4b939c5ff6836344b59566b86ae65bd, type: 3}
+    description: Pieces of memories created in Outpost 7.
+    hasMaxHoldAmt: 0
+    maxHoldAmt: 4
+    canBeEntity: 0
+    itemPrefab: {fileID: 2495225704792886151, guid: 7fcbb4386c5386745b5d265f77cc82fc, type: 3}
+    canBePickup: 0
+    Pickup: {fileID: 0}
+    <OverridePickupSpawn>k__BackingField: 0
+    <PickupSpawnOverride>k__BackingField: 0
+    <MinPickupValue>k__BackingField: 0
+    <MaxPickupValue>k__BackingField: 0
+    MinPickupCount: 1
+    MaxPickupCount: 1
+    <TimeBetweenSpawns>k__BackingField: {x: 0, y: 0}

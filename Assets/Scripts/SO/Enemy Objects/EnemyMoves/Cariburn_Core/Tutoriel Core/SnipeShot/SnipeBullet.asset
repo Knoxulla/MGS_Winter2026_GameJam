@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3f6db9729843e4d95fe395c97e3025, type: 3}
+  m_Name: SnipeBullet
+  m_EditorClassIdentifier: 
+  bulletSprite: {fileID: 710574232, guid: f304cf079dc17214aad8362cbd7d04b8, type: 3}
+  modifySize: 1
+  bulletSizeModifier: 2
+  spriteSizeModifier: 0
+  bulletType: 2
+  damageAmount: 2
+  bulletPattern: {fileID: 11400000, guid: 1e3e296fd54868844a79177158004df1, type: 2}
+  delayBetween: 0
+  <FreezeFramesOnDeath>k__BackingField: 0.15
+  <FireSound>k__BackingField:
+    Guid:
+      Data1: 3424374
+      Data2: 1088579694
+      Data3: -429130079
+      Data4: 430307299
+    Path: event:/SFX/Enemy/Core/ProjectileLaunch
+  <BreakSound>k__BackingField:
+    Guid:
+      Data1: -1905646741
+      Data2: 1143810303
+      Data3: -507345525
+      Data4: -1461408591
+    Path: event:/SFX/Projectiles/Hz2413_Explosion

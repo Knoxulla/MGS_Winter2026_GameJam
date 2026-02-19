@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3f6db9729843e4d95fe395c97e3025, type: 3}
+  m_Name: BulletWall
+  m_EditorClassIdentifier: 
+  bulletSprite: {fileID: -266183848, guid: f304cf079dc17214aad8362cbd7d04b8, type: 3}
+  modifySize: 1
+  bulletSizeModifier: 1.25
+  spriteSizeModifier: 1.25
+  bulletType: 0
+  damageAmount: 2
+  bulletPattern: {fileID: 11400000, guid: 192ab8154b42dd84ab1ce028aaac244d, type: 2}
+  delayBetween: 0
+  <FreezeFramesOnDeath>k__BackingField: 0
+  <FireSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <BreakSound>k__BackingField:
+    Guid:
+      Data1: 1934070001
+      Data2: 1195975422
+      Data3: 2108009133
+      Data4: -280547319
+    Path: event:/SFX/Projectiles/Hz2413_BreakSubtle
+  <LightingColor>k__BackingField: {r: 0, g: 1, b: 0.91764706, a: 1}
+  <LightIntensity>k__BackingField: 0.75
+  <SummonParticle>k__BackingField: {fileID: 11400000, guid: 04687aab6e1c4df48b1af0f479973e62, type: 2}
+  <BreakParticle>k__BackingField: {fileID: 11400000, guid: 11aaa816751604149b1805c3e2137c32, type: 2}

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3f6db9729843e4d95fe395c97e3025, type: 3}
+  m_Name: BulletSO_Emitter
+  m_EditorClassIdentifier: 
+  bulletSprite: {fileID: 537456364, guid: ce8e3f7e783e90c4ca84ee7da08c422a, type: 3}
+  modifySize: 1
+  bulletSizeModifier: 2
+  spriteSizeModifier: 0
+  bulletType: 1
+  damageAmount: 1
+  bulletPattern: {fileID: 11400000, guid: b006793c277c9374c93d68406975a1e7, type: 2}
+  delayBetween: 4
+  <FreezeFramesOnDeath>k__BackingField: 0
+  <FireSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <BreakSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <LightingColor>k__BackingField: {r: 0.5707547, g: 1, b: 0.6698113, a: 1}
+  <LightIntensity>k__BackingField: 1

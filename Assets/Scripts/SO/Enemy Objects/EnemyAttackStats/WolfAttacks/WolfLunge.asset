@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef29607e20cde2746ac447e6948ed224, type: 3}
+  m_Name: WolfLunge
+  m_EditorClassIdentifier: 
+  <Attack_Name>k__BackingField: Wolf Lunge
+  <Attack_Priority>k__BackingField: 3
+  <ScanRadius>k__BackingField: 3
+  <FreezePathing_WhileAttacking>k__BackingField: 1
+  <Controller_Cooldown>k__BackingField: 0
+  <RadiusGizmoColor>k__BackingField: {r: 0.021226406, g: 0.4145733, b: 0.5, a: 0.8352941}
+  <DrawGizmoRadius>k__BackingField: 1
