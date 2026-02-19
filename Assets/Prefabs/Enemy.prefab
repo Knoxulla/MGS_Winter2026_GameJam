@@ -82,6 +82,7 @@ MonoBehaviour:
   dmg: 15
   dmgMulti: 1
   finalDmg: 1
+  isAttacking: 0
   timer: 0
   attackCd: 5
 --- !u!114 &3731886222954424835
@@ -97,12 +98,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyMovement
   speedMulti: 1
-  spriteRenderer: {fileID: 0}
-  anim: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
+  spriteRenderer: {fileID: 8598495075845755065}
+  anim: {fileID: 3686229673836635471}
+  walkUp: {fileID: 6984951911662648169, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
+  walkDown: {fileID: -4071586955044407106, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
+  walkLeft: {fileID: -6445051068794620715, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
+  walkRight: {fileID: 3912193001854795070, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
 --- !u!50 &920969463029644921
 Rigidbody2D:
   serializedVersion: 5

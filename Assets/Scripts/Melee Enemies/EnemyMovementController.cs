@@ -21,6 +21,11 @@ public class EnemyMovementController : MonoBehaviour
         playerDetectionController = GetComponent<PlayerDetectionController>();
     }
 
+    void Start()
+    {
+        speedMulti = RoundSystemController.Instance.speedMulti;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -62,10 +67,5 @@ public class EnemyMovementController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-    }
-
-    public void SpeedMultiplier(float newSpeedMulti)
-    {
-        speedMulti = Mathf.Clamp(newSpeedMulti, 0.01f, 10f);
     }
 }
