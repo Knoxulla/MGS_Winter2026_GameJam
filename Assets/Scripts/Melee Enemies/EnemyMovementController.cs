@@ -62,6 +62,17 @@ public class EnemyMovementController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+
+        if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position, transform.position) > 1f
+             && targetDirection.normalized.y > 0.5f)
+        {
+            spriteRenderer.sortingOrder = 200;    
+        }
+        else if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position,transform.position) > 1f
+            && targetDirection.normalized.y < 0.5f)
+        {
+            spriteRenderer.sortingOrder = 20;
+        }
     }
 
         public void SpeedMultiplier(float newSpeedMulti)
