@@ -126,7 +126,7 @@ MonoBehaviour:
   <BulletAllegiance>k__BackingField: 1
   spawnPoint: {fileID: 5122829362617151349}
   rotationOffset: 0
-  attackPattern: {fileID: 11400000, guid: 1c9b28798e3365a44bf0d587774a1a7a, type: 2}
+  attackPattern: {fileID: 11400000, guid: 1bcad35991f870b4f885ababa4abb7c3, type: 2}
   baseDmg: 1
   minDmg: 10
   damageModifier: 0.2
@@ -140,7 +140,7 @@ MonoBehaviour:
   chargeIndicator: {fileID: 3373912378541751304}
   aimObject: {fileID: 5506515673238211498}
   aimArrow: {fileID: 2361712265692435874}
-  projectileSpawnPoint: {fileID: 5122829362617151349}
+  projectileSpawnPoint: {fileID: 3729323538376315231}
   mousePos: {x: 0, y: 0}
 --- !u!114 &3753692147945354900
 MonoBehaviour:

@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: BulletPatternSO_DoubleShot
   m_EditorClassIdentifier: Assembly-CSharp::BulletPatternSO
   bulletSO: {fileID: 11400000, guid: 3378e1c5fe5feaa4580ca23704c53dfa, type: 2}
-  patternType: 3
+  patternType: 0
   allegiance: 1
-  bulletSpeed: 10
-  patternLifetime: 3
-  spreadAngle: 91
+  bulletSpeed: 5.7
+  patternLifetime: 29.1
+  spreadAngle: 27
   spawnLocation: {x: 0, y: 0}
-  spawnDistance: 1.4
+  spawnDistance: 1
   angleOffset: 0
   player_aimed: 0
   defaultDirection: {x: 0, y: 0}
   windUpTime: 0
-  bulletsToFire: 2
+  bulletsToFire: 1
   loop: 0
   numberOfInstances: 1
-  delayBetween: 0.1
+  delayBetween: 0.01
   clockwiseSpiral: 1
-  bulletDelay: 0
+  bulletDelay: 0.49
   useBezierPath: 0
   keepMoving: 1
   calculatePath: 1
   pathRelativeToPlayer: 0
-  pathSelectionMode: 0
+  pathSelectionMode: 3
   bezierPaths: []
   pathWeights: []
