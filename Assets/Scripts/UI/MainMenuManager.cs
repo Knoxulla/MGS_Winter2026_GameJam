@@ -7,6 +7,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] Button playBTN;
     [SerializeField] Button optionsBTN;
     [SerializeField] Button creditsBTN;
+
+    [SerializeField] Transform leftWall;
+
     [SerializeField] Button exitBTN;
 
     private void Start()
@@ -24,6 +27,7 @@ public class MainMenuManager : MonoBehaviour
     private void OpenCredits()
     {
         SceneManager.LoadScene("CreditScene");
+
     }
 
     private void OpenOptions()
