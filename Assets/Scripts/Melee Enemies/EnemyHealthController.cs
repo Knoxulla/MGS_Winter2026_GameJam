@@ -4,6 +4,7 @@ public class EnemyHealthController : MonoBehaviour
 {
     [SerializeField] public float maxHealth = 10;
     [SerializeField] public float currentHealth = 10;
+    [SerializeField] public float expToDrop = 1;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,7 @@ public class EnemyHealthController : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            PlayerMASTER.Instance.playerExperienceController.AddExp(expToDrop);
             Destroy(gameObject);
         }
     }

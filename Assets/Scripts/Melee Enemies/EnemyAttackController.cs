@@ -7,6 +7,8 @@ public class EnemyAttackController : MonoBehaviour
     public float dmgMulti = 1;
     public float finalDmg= 1;
 
+    public bool isAttacking = false;
+
     public float timer = 0;
     
     public float attackCd;
