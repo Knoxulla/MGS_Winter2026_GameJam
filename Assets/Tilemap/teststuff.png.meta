@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 8898c3ced32fb54418581d919bd2d638
+guid: ad9802986abd6a6448f3447e511310c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2444804600555863241
-    second: crystal_cavern_foreground_0
+      213: -1360116262433738020
+    second: teststuff_0
   - first:
-      213: 3997297951687264082
-    second: crystal_cavern_foreground_1
+      213: -1011416899775821514
+    second: teststuff_1
   - first:
-      213: -6879535828312730344
-    second: crystal_cavern_foreground_2
+      213: -5491788739235296466
+    second: teststuff_2
   - first:
-      213: 7491436716293749403
-    second: crystal_cavern_foreground_3
+      213: 7467332164763577106
+    second: teststuff_3
+  - first:
+      213: -3438517761303203403
+    second: teststuff_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,59 +96,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -161,11 +112,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crystal_cavern_foreground_0
+      name: teststuff_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
+        y: 149
         width: 24
         height: 24
       alignment: 0
@@ -176,18 +127,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9cc7f51c4d0bde120800000000000000
-      internalID: 2444804600555863241
+      spriteID: cd2b76c2775ef1de0800000000000000
+      internalID: -1360116262433738020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crystal_cavern_foreground_1
+      name: teststuff_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 125
         width: 24
         height: 24
       alignment: 0
@@ -198,18 +149,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25747b7fe41497730800000000000000
-      internalID: 3997297951687264082
+      spriteID: 639090930b9b6f1f0800000000000000
+      internalID: -1011416899775821514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crystal_cavern_foreground_2
+      name: teststuff_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 72
+        y: 101
         width: 24
         height: 24
       alignment: 0
@@ -220,18 +171,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 815d8dd0d9af680a0800000000000000
-      internalID: -6879535828312730344
+      spriteID: e2bc3680d3f39c3b0800000000000000
+      internalID: -5491788739235296466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crystal_cavern_foreground_3
+      name: teststuff_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 77
         width: 24
         height: 24
       alignment: 0
@@ -242,18 +193,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9af10c800ee6f760800000000000000
-      internalID: 7491436716293749403
+      spriteID: 21be49c4a0b41a760800000000000000
+      internalID: 7467332164763577106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crystal_cavern_foreground_4
+      name: teststuff_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
+        y: 53
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1b6ab605ee740d0800000000000000
+      internalID: -3438517761303203403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teststuff_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
         width: 24
         height: 24
       alignment: 0
@@ -264,18 +237,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9c6ce0730ad324ca6153a1c232e979
-      internalID: 664218360
+      spriteID: fa4b53a6e2e433d4684994fad5e9f024
+      internalID: -1706690306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crystal_cavern_foreground_5
+      name: teststuff_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 5
         width: 24
         height: 24
       alignment: 0
@@ -286,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2607049a6c5f7e440a3d4d088408b334
-      internalID: -169169164
+      spriteID: 520b7d467db03f54da352193b5de548c
+      internalID: 284283820
       vertices: []
       indices: 
       edges: []
@@ -296,7 +269,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 31a590fa219526645b2dffd64d40f92a
+    spriteID: 4edcd8c13cdf57c47873ad2064a1f8d8
     internalID: 0
     vertices: []
     indices: 
@@ -308,12 +281,13 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":24.0,"y":24.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      crystal_cavern_foreground_0: 2444804600555863241
-      crystal_cavern_foreground_1: 3997297951687264082
-      crystal_cavern_foreground_2: -6879535828312730344
-      crystal_cavern_foreground_3: 7491436716293749403
-      crystal_cavern_foreground_4: 664218360
-      crystal_cavern_foreground_5: -169169164
+      teststuff_0: -1360116262433738020
+      teststuff_1: -1011416899775821514
+      teststuff_2: -5491788739235296466
+      teststuff_3: 7467332164763577106
+      teststuff_4: -3438517761303203403
+      teststuff_5: -1706690306
+      teststuff_6: 284283820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
