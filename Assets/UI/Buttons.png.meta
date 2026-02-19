@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -188,12 +188,12 @@ TextureImporter:
       name: Buttons_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 275
-        width: 98
-        height: 25
+        x: 0
+        y: 264
+        width: 100
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: Buttons_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 252
-        width: 96
+        x: 0
+        y: 241
+        width: 100
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: Buttons_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 200
-        width: 98
-        height: 25
+        x: 0
+        y: 217
+        width: 100
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: Buttons_3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 225
-        width: 96
+        x: 0
+        y: 193
+        width: 100
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: Buttons_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 177
-        width: 93
-        height: 23
+        x: 0
+        y: 169
+        width: 100
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +298,12 @@ TextureImporter:
       name: Buttons_5
       rect:
         serializedVersion: 2
-        x: 3
-        y: 150
-        width: 93
+        x: 0
+        y: 145
+        width: 100
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: Buttons_6
       rect:
         serializedVersion: 2
-        x: 21
-        y: 125
-        width: 58
-        height: 25
+        x: 19
+        y: 121
+        width: 59
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,12 +342,12 @@ TextureImporter:
       name: Buttons_7
       rect:
         serializedVersion: 2
-        x: 22
-        y: 101
-        width: 56
-        height: 23
+        x: 19
+        y: 97
+        width: 59
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,12 +364,12 @@ TextureImporter:
       name: Buttons_8
       rect:
         serializedVersion: 2
-        x: 10
-        y: 50
-        width: 75
-        height: 25
+        x: 19
+        y: 73
+        width: 59
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,12 +386,12 @@ TextureImporter:
       name: Buttons_9
       rect:
         serializedVersion: 2
-        x: 22
-        y: 75
-        width: 56
+        x: 12
+        y: 49
+        width: 75
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -409,11 +409,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 26
-        width: 71
-        height: 23
+        y: 25
+        width: 75
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -431,11 +431,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 0
-        width: 71
+        y: 1
+        width: 75
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -452,7 +452,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 03c78223bf955a142b6151cb151d4463
     internalID: 0
     vertices: []
     indices: 
@@ -460,7 +460,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":24.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Buttons_0: 8894201953851282084
       Buttons_1: 7664807735657788756
