@@ -14,6 +14,8 @@ public class PlayerMovementController : MonoBehaviour
     Vector2 input;
     [SerializeField] private float speed = 10;
 
+    [SerializeField] private GameObject player;
+
     public float adjustedSpeed = 1f;
 
     void Start()
