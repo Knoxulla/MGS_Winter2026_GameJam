@@ -23,6 +23,7 @@ public class PlayerExperienceController : MonoBehaviour
         if (currentXP == maxXP)
         {
             LevelUp();
+            RoundSystemController.Instance.UpdateStats();
         }
     }
 

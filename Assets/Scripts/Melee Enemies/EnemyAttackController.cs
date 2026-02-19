@@ -5,7 +5,7 @@ public class EnemyAttackController : MonoBehaviour
     [SerializeField]
     private float dmg = 1;
     public float dmgMulti = 1;
-    public float finalDmg= 1;
+    public float finalDmg = 1;
 
     public bool isAttacking = false;
 
@@ -18,11 +18,13 @@ public class EnemyAttackController : MonoBehaviour
     void Start()
     {
         col2D = GetComponent<CircleCollider2D>();
+        dmgMulti = RoundSystemController.Instance.dmgMulti;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (timer >= attackCd)
         {
             col2D.enabled = true;

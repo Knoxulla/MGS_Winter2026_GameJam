@@ -9,6 +9,7 @@ public class EnemyHealthController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        maxHealth = maxHealth * RoundSystemController.Instance.healthMulti;
         currentHealth = maxHealth;
     }
 
@@ -29,6 +30,6 @@ public class EnemyHealthController : MonoBehaviour
         {
             PlayerMASTER.Instance.playerExperienceController.AddExp(expToDrop);
             Destroy(gameObject);
-        }
+        }   
     }
 }

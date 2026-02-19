@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b305e98cba11540ba7d5266819057a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
-  rb: {fileID: 0}
+  rb: {fileID: 3329043940688218347}
   anim: {fileID: 7491473875576202172}
   walkUp: {fileID: -5223880024145265505, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
   walkDown: {fileID: 3374613219183224518, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerExperienceControiller
   currentXP: 0
-  maxXP: 0
+  maxXP: 10
   currentLevel: 1
   playerLvlValues:
     enemyDifficultyIncrease: 0
@@ -920,6 +920,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6602299746016743905, guid: 3d33831f6cdd6774c84b5eeeab622f18, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 5307119719079638733, guid: e2c8d8ff1ac112d468c1851a5b10fb57, type: 3}
     - target: {fileID: 7928792667971933915, guid: 3d33831f6cdd6774c84b5eeeab622f18, type: 3}
       propertyPath: m_Name
       value: SpawnController
