@@ -7,6 +7,7 @@ public class PlayerMASTER : MonoBehaviour
     public PlayerAttackController playerAttackController;
     public PlayerMovementController playerMovementController;
     public PlayerHealthController playerHealthController;
+    public PlayerExperienceController playerExperienceController;
 
 
     private void Awake()

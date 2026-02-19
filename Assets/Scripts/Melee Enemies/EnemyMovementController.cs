@@ -5,15 +5,15 @@ using UnityEngine.Splines;
 
 public class EnemyMovementController : MonoBehaviour
 {
-    private float speed = 2;
+    protected float speed = 2;
     public float speedMulti = 1;
 
-    private Rigidbody2D rb;
-    private PlayerDetectionController playerDetectionController;
-    private Vector2 targetDirection;
+    protected Rigidbody2D rb;
+    protected PlayerDetectionController playerDetectionController;
+    protected Vector2 targetDirection;
 
     [SerializeField]
-    SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
 
     void Awake()
     {
@@ -30,17 +30,17 @@ public class EnemyMovementController : MonoBehaviour
 
     private void UpdateTargetDirection()
     {
-        if(playerDetectionController.detectedPlayer)
+        if (playerDetectionController.detectedPlayer)
         {
             targetDirection = playerDetectionController.DirectionToPlayer;
-        } 
+        }
         else
         {
             targetDirection = Vector2.zero;
         }
     }
 
-    private void SetVelocity()
+    public virtual void SetVelocity()
     {
         if (targetDirection == Vector2.zero)
         {
@@ -48,24 +48,24 @@ public class EnemyMovementController : MonoBehaviour
         }
         else
         {
-            rb.linearVelocity = targetDirection.normalized * speed * speedMulti; 
+            rb.linearVelocity = targetDirection.normalized * speed * speedMulti;
         }
 
-        
+
         if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position, transform.position) > 1f
              && targetDirection.normalized.x > 0.5f)
         {
-            spriteRenderer.flipX = true;    
+            spriteRenderer.flipX = true;
         }
-        else if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position,transform.position) > 1f
+        else if (Vector2.Distance(PlayerMASTER.Instance.playerMovementController.gameObject.GetComponent<Transform>().position, transform.position) > 1f
             && targetDirection.normalized.x < 0.5f)
         {
             spriteRenderer.flipX = false;
         }
     }
 
-        public void SpeedMultiplier(float newSpeedMulti)
+    public void SpeedMultiplier(float newSpeedMulti)
     {
-        speedMulti = Mathf.Clamp(newSpeedMulti,0.01f, 10f);
+        speedMulti = Mathf.Clamp(newSpeedMulti, 0.01f, 10f);
     }
 }
