@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class Bullet_BASE : MonoBehaviour
 {
-    private const string IGNORE_BULLETS_TAG = "IgnoreProjectiles";
+    //private const string IGNORE_BULLETS_TAG = "IgnoreProjectiles";
 
     [Tooltip("The Current BulletSO")]
     public BulletSO bulletSO;
@@ -54,7 +54,7 @@ public class Bullet_BASE : MonoBehaviour
     
         if (isPlayerAllied)
         {
-           // damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg;
+            damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg;
             transform.position = PlayerMASTER.Instance.transform.position;
         }
         else
@@ -70,7 +70,7 @@ public class Bullet_BASE : MonoBehaviour
 
         if (isPlayerAllied)
         {
-           // damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg;
+           damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg;
             transform.position = PlayerMASTER.Instance.transform.position;
         }
         else
