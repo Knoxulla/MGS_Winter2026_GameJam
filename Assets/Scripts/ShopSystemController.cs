@@ -18,6 +18,7 @@ public class ShopSystemController : MonoBehaviour
 
     public Button invest;
     public Button closeShop;
+    public TMP_Text ROI;
 
     [SerializeField] public List<UpgradeSO> unlockableUpgrades;
     [SerializeField] public List<UpgradeSO> lockedUpgrades;
