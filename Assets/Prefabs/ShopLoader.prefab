@@ -74,6 +74,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53dd8edf17082724d94d556a305c2477, type: 2}
   - {fileID: 11400000, guid: 6ce56e59bcc9c5349bc09786c2c8bc98, type: 2}
   - {fileID: 11400000, guid: e7de4ff4f5e3643409d69bfb573fd5d0, type: 2}
+  - {fileID: 11400000, guid: aba49d6e65020d542bf287f8d67429d6, type: 2}
+  - {fileID: 11400000, guid: 2281dd43a288b0e4bbc29eae57113475, type: 2}
+  - {fileID: 11400000, guid: 438f78ce5aa14ef4f80162ffb0a3962d, type: 2}
   lockedUpgrades: []
   itemslot1:
     slotButton: {fileID: 0}

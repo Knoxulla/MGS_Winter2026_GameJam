@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
+    [SerializeField] float cooldown;
+    [SerializeField] float timer;
 
     [Tooltip("Assign your BulletPattern ScriptableObject here.")]
     public BulletPatternSO[] bulletPatterns;
@@ -32,7 +34,7 @@ public class BulletSpawner : MonoBehaviour
             Debug.LogWarning("[Bullet Spawner] Bullet pattern list is empty!");
         }
 
-        spawnPoint = transform;
+        //spawnPoint = transform;
     }
 
     public void SetPlayerTarget(Transform incomingTarget)
@@ -43,7 +45,19 @@ public class BulletSpawner : MonoBehaviour
 
     private void Update()
     {
-        //if (attackPattern == null) return;
+        DoCooldown();
+    }
+
+    public virtual void DoCooldown()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= cooldown)
+        {
+
+            timer = 0f;
+            TriggerAttack();
+        }
     }
 
     // Trigger an attack pattern sequence
