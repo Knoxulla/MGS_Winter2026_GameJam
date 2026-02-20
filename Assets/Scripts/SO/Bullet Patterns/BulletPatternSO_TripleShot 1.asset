@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3fcd7a3e6c32a46877190b3700c83b, type: 3}
+  m_Name: BulletPatternSO_TripleShot 1
+  m_EditorClassIdentifier: Assembly-CSharp::BulletPatternSO
+  bulletSO: {fileID: 11400000, guid: 3378e1c5fe5feaa4580ca23704c53dfa, type: 2}
+  patternType: 3
+  allegiance: 1
+  bulletSpeed: 5.7
+  patternLifetime: 29.1
+  spreadAngle: 27
+  spawnLocation: {x: 0, y: 0}
+  spawnDistance: 1
+  angleOffset: 0
+  player_aimed: 0
+  defaultDirection: {x: 0, y: 0}
+  windUpTime: 0
+  bulletsToFire: 3
+  loop: 0
+  numberOfInstances: 1
+  delayBetween: 0.01
+  clockwiseSpiral: 1
+  bulletDelay: 0.49
+  useBezierPath: 0
+  keepMoving: 1
+  calculatePath: 1
+  pathRelativeToPlayer: 0
+  pathSelectionMode: 3
+  bezierPaths: []
+  pathWeights: []
