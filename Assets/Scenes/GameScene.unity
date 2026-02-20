@@ -1130,57 +1130,6 @@ MonoBehaviour:
   BottomWall: {fileID: 802089585}
   distToWall: 5
   wallNum: 2
---- !u!1 &998657570
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 998657571}
-  - component: {fileID: 998657572}
-  m_Layer: 3
-  m_Name: RingOfPain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &998657571
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998657570}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &998657572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998657570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca297510d8bb4142a22545e470ec853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletSpawner
-  cooldown: 3
-  timer: 0
-  bulletPatterns: []
-  <BulletAllegiance>k__BackingField: 1
-  spawnPoint: {fileID: 6009634366583626477}
-  rotationOffset: 0
-  attackPattern: {fileID: 11400000, guid: a3c2201a5bc171041a441546924f17b1, type: 2}
 --- !u!114 &1055583187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37772,6 +37721,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 363ccae7dd22eb342ab426bc54cb537f, type: 3}
+--- !u!1001 &2615770542341161847
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 265392730644838748, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 6009634366583626477}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671140090165374174, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321853359775514865, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
+      propertyPath: m_Name
+      value: RingOfPain
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
 --- !u!1001 &4234814583188458595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37987,7 +37997,7 @@ SceneRoots:
   - {fileID: 235793947}
   - {fileID: 1970676487}
   - {fileID: 6009634366583626476}
-  - {fileID: 998657571}
+  - {fileID: 2615770542341161847}
   - {fileID: 362069421}
   - {fileID: 1937470075}
   - {fileID: 1607716538}
