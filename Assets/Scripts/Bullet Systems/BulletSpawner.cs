@@ -34,7 +34,7 @@ public class BulletSpawner : MonoBehaviour
             Debug.LogWarning("[Bullet Spawner] Bullet pattern list is empty!");
         }
 
-        //spawnPoint = transform;
+        spawnPoint = transform;
     }
 
     public void SetPlayerTarget(Transform incomingTarget)

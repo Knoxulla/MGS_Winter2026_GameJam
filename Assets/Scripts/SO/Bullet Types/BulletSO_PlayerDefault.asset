@@ -17,6 +17,6 @@ MonoBehaviour:
   bulletSizeModifier: 6
   spriteSizeModifier: 6
   bulletType: 0
-  damageAmount: 1
+  damageAmount: 10
   bulletPattern: {fileID: 11400000, guid: bea13c9c45d80754680539ce6ee5ec49, type: 2}
   delayBetween: 0

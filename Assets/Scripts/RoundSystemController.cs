@@ -10,7 +10,7 @@ public class RoundSystemController : MonoBehaviour
     public float speedMulti = 1;
     public float healthMulti = 1;
 
-
+    public float addToMulti = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,8 +41,8 @@ public class RoundSystemController : MonoBehaviour
 
     public void UpdateStats()
     {
-        dmgMulti += 1;
-        speedMulti += 1;
-        healthMulti += 1;
+        dmgMulti += addToMulti;
+        speedMulti += addToMulti;
+        healthMulti += addToMulti;
     }
 }

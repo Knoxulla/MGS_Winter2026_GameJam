@@ -21,7 +21,7 @@ MonoBehaviour:
   speed: 0
   maxHealth: 0
   currentHealth: 0
-  baseDamage: 0
+  baseDamage: 10
   spawnsInWorld: 1
   spawnableObj: {fileID: 7321853359775514865, guid: 315ab9cc9a4c43a44a7006b1e5e848b4, type: 3}
   attackChange: {fileID: 0}

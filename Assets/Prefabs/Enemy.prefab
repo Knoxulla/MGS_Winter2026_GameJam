@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMASTER
   movement: {fileID: 3731886222954424835}
   attackController: {fileID: 3967533186022269441}
+  healthController: {fileID: 6566361663626410138}
 --- !u!114 &4183925292326446396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,11 +80,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394578b64854e0d439b6d8ce4bc2de98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthController
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 40
+  currentHealth: 40
   expToDrop: 3
   currencyToDrop: 25
-  currencyToDrop: 1
 --- !u!114 &3967533186022269441
 MonoBehaviour:
   m_ObjectHideFlags: 0

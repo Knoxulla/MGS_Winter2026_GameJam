@@ -148,7 +148,7 @@ public class Bullet_BASE : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("HIT ENEMY WHERE DMG");
-                DealDamageToEnemy(collision.gameObject.GetComponent<EnemyHealthController>());
+                DealDamageToEnemy(collision.gameObject.GetComponent<EnemyMASTER>().healthController);
 
                 BulletPoolManager.Instance.ReturnBulletToPool(this);
             }
