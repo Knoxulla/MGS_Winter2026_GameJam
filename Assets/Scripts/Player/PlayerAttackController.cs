@@ -117,6 +117,11 @@ public class PlayerAttackController : BulletSpawner
         }
     }
 
+    public override void DoCooldown()
+    {
+            
+    }
+
     private void PerformAttack()
     {
         // GameObject obj = Instantiate(projectile, projectileSpawnPoint);
