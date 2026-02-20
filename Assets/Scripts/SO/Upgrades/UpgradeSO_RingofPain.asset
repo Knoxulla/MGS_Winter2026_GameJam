@@ -17,7 +17,7 @@ MonoBehaviour:
   upgradeIcon: {fileID: 21300000, guid: 10c755184653dd745a309dd50037abb2, type: 3}
   upgradeName: Ring of Pain
   upgradeDescription: Summon a deadly ring of swirling blades!
-  cost: 0
+  cost: 600
   speed: 0
   maxHealth: 0
   currentHealth: 0
