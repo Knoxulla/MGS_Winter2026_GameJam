@@ -3678,8 +3678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopSystemController
   shopObject: {fileID: 2126086544}
-  invest: {fileID: 958639391}
-  closeShop: {fileID: 1348821273}
   unlockableUpgrades: []
   lockedUpgrades: []
   itemslot1:
@@ -4879,7 +4877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2126086546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37739,6 +37737,10 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1970676485}
+    - target: {fileID: 4731765864954146468, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7724148279692848592, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: walkDownGun
       value: 

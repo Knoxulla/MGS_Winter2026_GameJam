@@ -28,7 +28,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] AnimationClip idleRight;
 
     Vector2 input;
-    [SerializeField] private float speed = 10;
+    [SerializeField] public float speed = 10;
 
 
     public float adjustedSpeed = 1f;

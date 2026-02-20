@@ -8,12 +8,16 @@ using UnityEngine.UI;
 using TMPro;
 using System.Security.Cryptography;
 using Unity.Collections;
+using UnityEngine.Networking;
 
 public class ShopSystemController : MonoBehaviour
 {
     public static ShopSystemController Instance { get; private set; }
 
     public GameObject shopObject;
+
+    public Button invest;
+    public Button closeShop;
 
     [SerializeField] public List<UpgradeSO> unlockableUpgrades;
     [SerializeField] public List<UpgradeSO> lockedUpgrades;
@@ -26,6 +30,8 @@ public class ShopSystemController : MonoBehaviour
     void Start()
     {
         shopObject.SetActive(false);
+        invest.onClick.AddListener(PlayerMASTER.Instance.playerCurrencyController.InvestMoney);
+        closeShop.onClick.AddListener(CloseShop);
     }
 
     // Update is called once per frame
@@ -37,10 +43,13 @@ public class ShopSystemController : MonoBehaviour
     public void CloseShop()
     {
         shopObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void OpenShop()
     {
+        Time.timeScale = 0f;
+
         if (PlayerMASTER.Instance.playerExperienceController.currentLevel % 5 == 0)
         {
             if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 30) 
@@ -56,6 +65,23 @@ public class ShopSystemController : MonoBehaviour
               PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f);   
             }
         }
+
+        int slot1 = Random.Range(1, unlockableUpgrades.Count);
+        int slot2 = Random.Range(1, unlockableUpgrades.Count);
+        int slot3 = Random.Range(1, unlockableUpgrades.Count);
+
+        while (slot2 == slot1)
+        {
+            slot2 = Random.Range(1, unlockableUpgrades.Count);
+        }
+
+        while (slot3 == slot2 || slot3 == slot1)
+        {
+            slot3 = Random.Range(1, unlockableUpgrades.Count);
+        }
+
+        AssignButtons(slot1, slot2, slot3);
+
         shopObject.SetActive(true);
     }
 
@@ -65,13 +91,36 @@ public class ShopSystemController : MonoBehaviour
         {
             if (x.upgradeID == itemslot1.itemID && x.cost <= PlayerMASTER.Instance.playerCurrencyController.currentCurrency)
             {
-                if (!x.isReoccuring)
-                {
-                    unlockableUpgrades.Remove(x);
-                }   
+            
                 PlayerMASTER.Instance.playerCurrencyController.AddCurrency(-x.cost);
+
+                ApplyUpgrade(x);
             }
         }
+    }
+
+    public void ApplyUpgrade(UpgradeSO upgrade)
+    {
+
+        if (upgrade.spawnsInWorld == true)
+        {
+            Instantiate(upgrade.spawnableObj,PlayerMASTER.Instance.transform);
+        }
+
+        PlayerMASTER.Instance.playerMovementController.speed += upgrade.speed;
+        PlayerMASTER.Instance.playerHealthController.maxHealth += upgrade.maxHealth;
+        PlayerMASTER.Instance.playerHealthController.currentHealth += upgrade.currentHealth;
+        PlayerMASTER.Instance.playerAttackController.baseDmg += upgrade.baseDamage;
+
+        if (upgrade.attackChange != null)
+        {
+            PlayerMASTER.Instance.playerAttackController.attackPattern = upgrade.attackChange;
+        }
+
+        if (!upgrade.isReoccuring)
+        {
+            unlockableUpgrades.Remove(upgrade);
+        }   
     }
 
     public void BuyUpgrade2()
@@ -102,25 +151,6 @@ public class ShopSystemController : MonoBehaviour
                 PlayerMASTER.Instance.playerCurrencyController.AddCurrency(-x.cost);
             }
         }
-    }
-
-    public void OnEnable()
-    {
-        int slot1 = Random.Range(1, unlockableUpgrades.Count);
-        int slot2 = Random.Range(1, unlockableUpgrades.Count);
-        int slot3 = Random.Range(1, unlockableUpgrades.Count);
-
-        while (slot2 == slot1)
-        {
-            slot2 = Random.Range(1, unlockableUpgrades.Count);
-        }
-
-        while (slot3 == slot2 || slot3 == slot1)
-        {
-            slot3 = Random.Range(1, unlockableUpgrades.Count);
-        }
-
-        AssignButtons(slot1, slot2, slot3);
     }
 
     public void AssignButtons(int slot1, int slot2, int slot3)
