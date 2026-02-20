@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyHealthController : MonoBehaviour
@@ -24,8 +25,15 @@ public class EnemyHealthController : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            
             PlayerMASTER.Instance.playerExperienceController.AddExp(expToDrop);
-            Destroy(gameObject);
+            StartCoroutine(Die());
         }   
+    }
+
+    private IEnumerator Die()
+    { 
+        yield return new WaitForEndOfFrame();
+        Destroy(gameObject);
     }
 }

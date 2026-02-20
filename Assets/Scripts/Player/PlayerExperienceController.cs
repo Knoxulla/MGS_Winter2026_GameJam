@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 
 public class PlayerExperienceController : MonoBehaviour
@@ -6,7 +5,6 @@ public class PlayerExperienceController : MonoBehaviour
     public float currentXP;
     public float maxXP;
     public int currentLevel;
-    public PlayerLevelValues playerLvlValues;
 
 
     private void Start()
@@ -16,7 +14,7 @@ public class PlayerExperienceController : MonoBehaviour
     }
     public void AddExp(float xpAmt)
     { 
-        currentXP = xpAmt;
+        currentXP += xpAmt;
         EventManager.Instance.player_events.PlayerExpChanged(currentXP);
     }
 
@@ -27,7 +25,7 @@ public class PlayerExperienceController : MonoBehaviour
 
     private void Update()
     {
-        if (currentXP == maxXP)
+        if (currentXP >= maxXP)
         {
             LevelUp();
             
@@ -42,10 +40,4 @@ public class PlayerExperienceController : MonoBehaviour
         // Apply the new round modifiers
         RoundSystemController.Instance.UpdateStats();
     }
-}
-
-[System.Serializable]
-public class PlayerLevelValues
-{
-    public float enemyDifficultyIncrease;
 }
