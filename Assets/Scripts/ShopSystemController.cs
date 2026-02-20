@@ -18,6 +18,7 @@ public class ShopSystemController : MonoBehaviour
 
     public Button invest;
     public Button closeShop;
+    public TMP_Text currentInvestment;
     public TMP_Text ROI;
 
     [SerializeField] public List<UpgradeSO> unlockableUpgrades;
@@ -32,13 +33,13 @@ public class ShopSystemController : MonoBehaviour
     {
         shopObject.SetActive(false);
         invest.onClick.AddListener(PlayerMASTER.Instance.playerCurrencyController.InvestMoney);
+        invest.onClick.AddListener(UpdateInvestment);
         closeShop.onClick.AddListener(CloseShop);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void CloseShop()
@@ -61,20 +62,33 @@ public class ShopSystemController : MonoBehaviour
     {
         Time.timeScale = 0f;
 
-        if (PlayerMASTER.Instance.playerExperienceController.currentLevel % 5 == 0)
+        if (PlayerMASTER.Instance.playerExperienceController.currentLevel % 3 == 0)
         {
-            if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 30) 
+            if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 100) 
             {
-              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.01f);   
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.01f);
             } 
-            else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency < 60) 
+            else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency < 500) 
             {
               PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.02f);   
             }
-            else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency >= 90) 
+            else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency >= 900) 
             {
-              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f);   
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f);  
             }
+        }
+
+        if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 100) 
+        {
+            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.01f).ToString();
+        }  
+        else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency < 500) 
+        { 
+            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.02f).ToString();
+        }
+        else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency >= 900) 
+        {   
+            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f).ToString(); 
         }
 
         int slot1 = Random.Range(1, unlockableUpgrades.Count);
@@ -197,6 +211,10 @@ public class ShopSystemController : MonoBehaviour
                 itemslot3.iconImg.sprite = unlockableUpgrades[i].upgradeIcon;
             }
         }
+    }
+    public void UpdateInvestment()
+    {
+        currentInvestment.text = PlayerMASTER.Instance.playerCurrencyController.investedCurrency.ToString();
     }
 }
 

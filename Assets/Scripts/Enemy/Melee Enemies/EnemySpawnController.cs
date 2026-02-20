@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemySpawnController : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject chillyEnemyPrefab;
+    public GameObject battyEnemyPrefab;
     public Transform[] spawnPoints; 
     public float spawnDelay = 3f;
     private float nextSpawnTime;
@@ -28,6 +29,12 @@ public class EnemySpawnController : MonoBehaviour
     void SpawnEnemy()
     {
         int spawnIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(enemyPrefab, spawnPoints[spawnIndex].position, spawnPoints[spawnIndex].rotation);
+        if (Random.Range(1,5) == 1) 
+        {
+            Instantiate(battyEnemyPrefab, spawnPoints[spawnIndex].position, spawnPoints[spawnIndex].rotation);
+        } else
+        {
+            Instantiate(chillyEnemyPrefab, spawnPoints[spawnIndex].position, spawnPoints[spawnIndex].rotation);
+        }
     }
 }
