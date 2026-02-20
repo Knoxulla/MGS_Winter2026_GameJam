@@ -13,6 +13,8 @@ public class ShopSystemController : MonoBehaviour
 {
     public static ShopSystemController Instance { get; private set; }
 
+    public GameObject shopObject;
+
     [SerializeField] public List<UpgradeSO> unlockableUpgrades;
     [SerializeField] public List<UpgradeSO> lockedUpgrades;
 
@@ -23,7 +25,7 @@ public class ShopSystemController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameObject.SetActive(false);
+        shopObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,7 +36,7 @@ public class ShopSystemController : MonoBehaviour
 
     public void CloseShop()
     {
-        gameObject.SetActive(false);
+        shopObject.SetActive(false);
     }
 
     public void OpenShop()
@@ -54,7 +56,7 @@ public class ShopSystemController : MonoBehaviour
               PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f);   
             }
         }
-        gameObject.SetActive(true);
+        shopObject.SetActive(true);
     }
 
     public void BuyUpgrade1()

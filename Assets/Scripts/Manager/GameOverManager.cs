@@ -9,12 +9,9 @@ public class GameOverManager : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0f;
-
         replay.onClick.AddListener(Replay);
         goToCrd.onClick.AddListener(GoToCredits);
     }
-
     private void GoToCredits()
     {
         SceneManager.LoadScene("CreditScene");

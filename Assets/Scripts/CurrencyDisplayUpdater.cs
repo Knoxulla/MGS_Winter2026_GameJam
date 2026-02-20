@@ -7,7 +7,7 @@ public class CurrencyDisplayUpdater : MonoBehaviour
 
 
 
-    private void OnEnable()
+    private void Update()
     {
         //GameEventsManager.instance.goldEvents.onGoldChange += UpdateCurrencyDisplay;
 

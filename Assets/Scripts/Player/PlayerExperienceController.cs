@@ -10,6 +10,7 @@ public class PlayerExperienceController : MonoBehaviour
     private void Start()
     {
         ResetExp();
+        currentLevel = 1;
         EventManager.Instance.player_events.PlayerExpChanged(currentXP);
     }
     public void AddExp(float xpAmt)
