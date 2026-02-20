@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeSO : ScriptableObject
 {
     [Tooltip("For programming, please add one on every upgrade and note which upgrade with ID needs to be bought in order for another to becoem available")] public int upgradeID;
+    [Tooltip("Can this item be bought over and over again?")] public bool isReoccuring;
 
     [Space(5)]
 

@@ -87,10 +87,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
   rb: {fileID: 3329043940688218347}
   anim: {fileID: 7491473875576202172}
-  walkUp: {fileID: -5223880024145265505, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  walkDown: {fileID: 3374613219183224518, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  walkLeft: {fileID: -5053880946443293090, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  walkRight: {fileID: 7624658416883487128, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
+  walkUpGun: {fileID: -5960319766064904449, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkDownGun: {fileID: 8177201999995236689, guid: a41e69dc8a1337e439252ebf8028716c, type: 3}
+  walkLeftGun: {fileID: -5888033368203458505, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkRightGun: {fileID: -2075965821672888952, guid: a41e69dc8a1337e439252ebf8028716c, type: 3}
+  idleGunUp: {fileID: 2754447578344308797, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunDown: {fileID: 7529406122145108637, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunLeft: {fileID: 776088418896786713, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunRight: {fileID: 5608111579832926635, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkUp: {fileID: 4445823050340934633, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkDown: {fileID: -716043774657550191, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkLeft: {fileID: -6445051068794620715, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkRight: {fileID: 3912193001854795070, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleUp: {fileID: 5119750057529349254, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleDown: {fileID: -6863445211018041334, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleLeft: {fileID: -681356279539387494, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleRight: {fileID: -1742030827279190362, guid: af3fee33e6927d944aede8b763b55323, type: 3}
   speed: 100
   adjustedSpeed: 1
 --- !u!114 &719909340433396101
@@ -108,8 +120,6 @@ MonoBehaviour:
   currentXP: 0
   maxXP: 10
   currentLevel: 1
-  playerLvlValues:
-    enemyDifficultyIncrease: 0
 --- !u!114 &8918169551643806228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +151,7 @@ MonoBehaviour:
   aimObject: {fileID: 5506515673238211498}
   aimArrow: {fileID: 2361712265692435874}
   projectileSpawnPoint: {fileID: 3729323538376315231}
+  isAttacking: 0
   mousePos: {x: 0, y: 0}
 --- !u!114 &3753692147945354900
 MonoBehaviour:
@@ -860,7 +871,7 @@ Animator:
   m_GameObject: {fileID: 7397834997571107307}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -8734267277679185358, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
+  m_Controller: {fileID: 4702720975399472065, guid: af3fee33e6927d944aede8b763b55323, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
