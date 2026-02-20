@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4676012e29698b342959b977e2e43db2, type: 3}
-  m_Name: UpgradeSO_DoubleShot
+  m_Name: UpgradeSO_HP Upgrade
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeSO
-  upgradeID: 0
-  upgradeIcon: {fileID: 21300000, guid: 9b877babdb689504697e558f5834c4d3, type: 3}
-  upgradeName: Cloning Mags
-  upgradeDescription: Shoot 2 bullets instead of one!
+  upgradeID: 8
+  upgradeIcon: {fileID: 21300000, guid: 453c81ea68f284f448301c5654818803, type: 3}
+  upgradeName: HP Upgrade
+  upgradeDescription: Your max HP is increased, and you regenerate some health.
   cost: 0
   speed: 0
-  maxHealth: 0
-  currentHealth: 0
+  maxHealth: 20
+  currentHealth: 50
   baseDamage: 0
   spawnsInWorld: 0
   spawnableObj: {fileID: 0}
-  attackChange: {fileID: 11400000, guid: 1c9b28798e3365a44bf0d587774a1a7a, type: 2}
+  attackChange: {fileID: 0}
