@@ -10,6 +10,7 @@ public class PlayerExperienceController : MonoBehaviour
     private void Start()
     {
         ResetExp();
+        currentLevel = 1;
         EventManager.Instance.player_events.PlayerExpChanged(currentXP);
     }
     public void AddExp(float xpAmt)
@@ -28,7 +29,6 @@ public class PlayerExperienceController : MonoBehaviour
         if (currentXP >= maxXP)
         {
             LevelUp();
-            
         }
     }
 
@@ -39,5 +39,6 @@ public class PlayerExperienceController : MonoBehaviour
         EventManager.Instance.player_events.PlayerExpChanged(currentXP);
         // Apply the new round modifiers
         RoundSystemController.Instance.UpdateStats();
+        ShopSystemController.Instance.OpenShop();
     }
 }

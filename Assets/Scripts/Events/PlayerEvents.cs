@@ -18,6 +18,12 @@ public class PlayerEvents
         OnPlayerExpChanged?.Invoke(expGained);
     }
 
+    public event Action<float> OnPlayerCurrencyChanged;
+    public void PlayerCurrencyChanged(float currenyGained)
+    {
+        OnPlayerCurrencyChanged?.Invoke(currenyGained);
+    }
+
     // Game Over Event
     public event Action OnGameOver;
     public void GameOver()

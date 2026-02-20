@@ -7,11 +7,11 @@ public class CurrencyDisplayUpdater : MonoBehaviour
 
 
 
-    private void OnEnable()
+    private void Update()
     {
         //GameEventsManager.instance.goldEvents.onGoldChange += UpdateCurrencyDisplay;
 
-        UpdateCurrencyDisplay(GoldManager.Instance.currentGold);
+        UpdateCurrencyDisplay(PlayerMASTER.Instance.playerCurrencyController.currentCurrency);
     }
 
     private void OnDisable()
@@ -19,7 +19,7 @@ public class CurrencyDisplayUpdater : MonoBehaviour
         //GameEventsManager.instance.goldEvents.onGoldChange -= UpdateCurrencyDisplay;
     }
 
-    private void UpdateCurrencyDisplay(int currency)
+    private void UpdateCurrencyDisplay(float currency)
     {
         currencyDisplay.text = $"{currency}";
     }

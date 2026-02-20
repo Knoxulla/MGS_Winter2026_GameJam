@@ -15,7 +15,9 @@ public class RoundSystemController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        dmgMulti = 1;
+        speedMulti = 1;
+        healthMulti = 1;
     }
 
     private void Awake()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class PlayerHealthController : MonoBehaviour
 
     public void UpdateHealth(float newHealth)
     {
+        if (newHealth <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
         currentHealth = Mathf.RoundToInt(Mathf.Clamp(newHealth, 0, maxHealth));
         EventManager.Instance.player_events.PlayerHealthChanged(currentHealth);
     }

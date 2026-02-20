@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3753692147945354900}
   - component: {fileID: 3329043940688218347}
   - component: {fileID: 581219701427882346}
+  - component: {fileID: 7832956786211100425}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -59,6 +60,7 @@ MonoBehaviour:
   playerMovementController: {fileID: 7724148279692848592}
   playerHealthController: {fileID: 9140813678010314249}
   playerExperienceController: {fileID: 719909340433396101}
+  playerCurrencyController: {fileID: 7832956786211100425}
 --- !u!114 &9140813678010314249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,10 +89,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
   rb: {fileID: 3329043940688218347}
   anim: {fileID: 7491473875576202172}
-  walkUp: {fileID: -5223880024145265505, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  walkDown: {fileID: 3374613219183224518, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  walkLeft: {fileID: -5053880946443293090, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
-  walkRight: {fileID: 7624658416883487128, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
+  walkUpGun: {fileID: -5960319766064904449, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkDownGun: {fileID: 3008005152636414897, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkLeftGun: {fileID: -5888033368203458505, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkRightGun: {fileID: -1493648560005628891, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunUp: {fileID: 2754447578344308797, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunDown: {fileID: 7529406122145108637, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunLeft: {fileID: 776088418896786713, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleGunRight: {fileID: 5608111579832926635, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkUp: {fileID: 4445823050340934633, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkDown: {fileID: -716043774657550191, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkLeft: {fileID: -6445051068794620715, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  walkRight: {fileID: 3912193001854795070, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleUp: {fileID: 5119750057529349254, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleDown: {fileID: -6863445211018041334, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleLeft: {fileID: -681356279539387494, guid: af3fee33e6927d944aede8b763b55323, type: 3}
+  idleRight: {fileID: -1742030827279190362, guid: af3fee33e6927d944aede8b763b55323, type: 3}
   speed: 100
   adjustedSpeed: 1
 --- !u!114 &719909340433396101
@@ -108,8 +122,6 @@ MonoBehaviour:
   currentXP: 0
   maxXP: 10
   currentLevel: 1
-  playerLvlValues:
-    enemyDifficultyIncrease: 0
 --- !u!114 &8918169551643806228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +153,7 @@ MonoBehaviour:
   aimObject: {fileID: 5506515673238211498}
   aimArrow: {fileID: 2361712265692435874}
   projectileSpawnPoint: {fileID: 3729323538376315231}
+  isAttacking: 0
   mousePos: {x: 0, y: 0}
 --- !u!114 &3753692147945354900
 MonoBehaviour:
@@ -348,6 +361,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03531885, y: 0.91500294}
   m_Size: {x: 1.0447743, y: 2.3700058}
   m_Direction: 0
+--- !u!114 &7832956786211100425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771823184294182598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76a49d4e039f1c4ebcaa5d6904b2668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCurrencyController
+  currentXP: 0
+  maxXP: 0
+  currentCurrency: 0
 --- !u!1 &2162714732781644026
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +875,7 @@ SpriteRenderer:
   m_Size: {x: 0.25, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7491473875576202172
@@ -860,7 +888,7 @@ Animator:
   m_GameObject: {fileID: 7397834997571107307}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -8734267277679185358, guid: b3416145cc11e3e4caa3ce261c2f0aa5, type: 3}
+  m_Controller: {fileID: 4702720975399472065, guid: af3fee33e6927d944aede8b763b55323, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

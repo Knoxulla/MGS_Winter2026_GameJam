@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3f6db9729843e4d95fe395c97e3025, type: 3}
   m_Name: BulletSO_PlayerDefault
   m_EditorClassIdentifier: Assembly-CSharp::BulletSO
-  bulletSprite: {fileID: 21300000, guid: 3176b93426b40634895f447a498460d4, type: 3}
+  bulletSprite: {fileID: -7425989310076165327, guid: 7dfbfe88390fc5547a23f621f269aa9b, type: 3}
   modifySize: 0
-  bulletSizeModifier: 2
-  spriteSizeModifier: 0.5
+  bulletSizeModifier: 6
+  spriteSizeModifier: 6
   bulletType: 0
   damageAmount: 1
   bulletPattern: {fileID: 11400000, guid: bea13c9c45d80754680539ce6ee5ec49, type: 2}

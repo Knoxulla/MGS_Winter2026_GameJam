@@ -7,8 +7,8 @@ public class PlayerAttackController : BulletSpawner
 {
     #region Variables
     [Header("Damage")]
-    [SerializeField] float baseDmg = 1;
-    [SerializeField] float minDmg = 10;
+    [SerializeField] public float baseDmg = 1;
+    [SerializeField] public float minDmg = 10;
     [SerializeField, Tooltip("additive damage modifer to be modified by powerUps")] float damageModifier = 0;
     [Tooltip("Automatically changes, this is just so it can be viewed")] public float modifiedDmg = 0f;
 
@@ -30,7 +30,7 @@ public class PlayerAttackController : BulletSpawner
     [SerializeField] public GameObject aimArrow;
     [SerializeField] Transform projectileSpawnPoint;
 
-    bool attackIsHeld = false;
+    public bool isAttacking = false;
 
     public Vector2 mousePos;
     #endregion
@@ -44,7 +44,7 @@ public class PlayerAttackController : BulletSpawner
     private void FixedUpdate()
     {
 
-        if (attackIsHeld)
+        if (isAttacking)
         {
             currentCharge += chargeAddedPerFrame;
             if (PlayerMASTER.Instance.playerMovementController.adjustedSpeed > 0.01f)
@@ -105,11 +105,11 @@ public class PlayerAttackController : BulletSpawner
     {
         if (ctx.started)
         {
-            attackIsHeld = true;
+            isAttacking = true;
         }
         else if (ctx.canceled)
         {
-            attackIsHeld = false;
+            isAttacking = false;
             currentCharge = 0;
 
             // Do Attack
@@ -126,7 +126,7 @@ public class PlayerAttackController : BulletSpawner
     private float CalculateDmg()
     {
         // Returns
-        if (!attackIsHeld) return 0f;
+        if (!isAttacking) return 0f;
 
 
         if (currentCharge < 1)

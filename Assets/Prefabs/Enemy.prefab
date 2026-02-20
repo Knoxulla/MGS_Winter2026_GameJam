@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 287995662636340860}
+  - component: {fileID: 1541159186524070679}
   - component: {fileID: 4183925292326446396}
   - component: {fileID: 6566361663626410138}
   - component: {fileID: 3967533186022269441}
@@ -39,6 +40,20 @@ Transform:
   - {fileID: 6309208589694471606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541159186524070679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5307119719079638733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7bc15d7a1f98842ac21d494d0e6bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMASTER
+  movement: {fileID: 3731886222954424835}
+  attackController: {fileID: 3967533186022269441}
 --- !u!114 &4183925292326446396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +115,10 @@ MonoBehaviour:
   speedMulti: 1
   spriteRenderer: {fileID: 8598495075845755065}
   anim: {fileID: 3686229673836635471}
+  FightUp: {fileID: 8425720195793688847, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
+  FightDown: {fileID: -7637156585662331661, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
+  FightLeft: {fileID: 4635294572651244040, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
+  FightRight: {fileID: 7593446664206305484, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
   walkUp: {fileID: 6984951911662648169, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
   walkDown: {fileID: -4071586955044407106, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
   walkLeft: {fileID: -6445051068794620715, guid: a366b665255900b4e8c6fa2ff0361eff, type: 3}
