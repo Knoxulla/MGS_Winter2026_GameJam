@@ -123,14 +123,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521483273c028d94fa6945823588c350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangedEnemyAttackController
-  dmg: 1
+  dmg: 15
   dmgMulti: 1
   finalDmg: 1
   isAttacking: 0
   lengthOfAttack: 1
   timer: 0
   attackCd: 0
+  projectileSpd: 1
+  projectileLifetime: 3
   bullet: {fileID: 6312281180604386170, guid: 55499af70678e434f98251dfe5c7ad0c, type: 3}
+  col: {fileID: 0}
 --- !u!114 &6625845329308363580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20a42e53881cb14bba6b4407f1e2f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementController
+  speed: 2
   speedMulti: 1
   spriteRenderer: {fileID: 5366516840707730220}

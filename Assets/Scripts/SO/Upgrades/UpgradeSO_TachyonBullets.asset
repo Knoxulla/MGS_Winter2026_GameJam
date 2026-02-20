@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4676012e29698b342959b977e2e43db2, type: 3}
-  m_Name: UpgradeSO_Damage Upgrade
+  m_Name: UpgradeSO_TachyonBullets
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeSO
-  upgradeID: 9
+  upgradeID: 13
   isReoccuring: 0
-  upgradeIcon: {fileID: 21300000, guid: cb69cc4438994d0429a1da0825888c4d, type: 3}
-  upgradeName: DMG UP
-  upgradeDescription: Boost the lethality of your attacks!
-  cost: 200
+  upgradeIcon: {fileID: 21300000, guid: 5671757570bc05e4298957390170f076, type: 3}
+  upgradeName: Tachyon Bullets
+  upgradeDescription: Your bullets become insanely powerful!
+  cost: 500
   speed: 0
   maxHealth: 0
   currentHealth: 0
-  baseDamage: 5
+  baseDamage: 14
   spawnsInWorld: 0
   spawnableObj: {fileID: 0}
   attackChange: {fileID: 0}

@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a16301f3dd38c4d8677d774c74b116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDetectionController
-  detectedPlayerDistance: 10
+  detectedPlayerDistance: 15
 --- !u!114 &6566361663626410138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,9 +79,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394578b64854e0d439b6d8ce4bc2de98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthController
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 100
+  currentHealth: 100
   expToDrop: 3
+  currencyToDrop: 25
 --- !u!114 &3967533186022269441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +99,7 @@ MonoBehaviour:
   dmgMulti: 1
   finalDmg: 1
   isAttacking: 0
+  lengthOfAttack: 1
   timer: 0
   attackCd: 5
 --- !u!114 &3731886222954424835
@@ -112,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c754d4678a37347bc35d0f739dd618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyMovement
+  speed: 2
   speedMulti: 1
   spriteRenderer: {fileID: 8598495075845755065}
   anim: {fileID: 3686229673836635471}

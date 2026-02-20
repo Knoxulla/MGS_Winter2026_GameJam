@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: UpgradeSO_TwilightLantern
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeSO
   upgradeID: 6
+  isReoccuring: 0
   upgradeIcon: {fileID: 21300000, guid: 0860842b1278e2b4283fe0171abeafa1, type: 3}
   upgradeName: Twilight Lantern
-  upgradeDescription: Leave a trail of damaging lights in your wake!
-  cost: 0
-  speed: 0
-  maxHealth: 0
-  currentHealth: 0
-  baseDamage: 0
+  upgradeDescription: A mystical lantern boosts all your stats!
+  cost: 450
+  speed: 5
+  maxHealth: 10
+  currentHealth: 20
+  baseDamage: 5
   spawnsInWorld: 0
   spawnableObj: {fileID: 0}
   attackChange: {fileID: 0}
