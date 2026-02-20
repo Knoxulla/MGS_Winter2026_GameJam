@@ -39,5 +39,6 @@ public class PlayerExperienceController : MonoBehaviour
         EventManager.Instance.player_events.PlayerExpChanged(currentXP);
         // Apply the new round modifiers
         RoundSystemController.Instance.UpdateStats();
+        ShopSystemController.Instance.openShop();
     }
 }

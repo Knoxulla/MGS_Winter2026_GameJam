@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "UpgradeSO_", menuName = "Scriptable Objects/UpgradeSO")]
