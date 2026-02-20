@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class RangedEnemyAttackController : EnemyAttackController
 {
-
+    [Header("Projectiles")]
     [SerializeField] float projectileSpd = 1f;
     [SerializeField] float projectileLifetime = 3f;
     [SerializeField] GameObject bullet;
 
     [SerializeField] Collider2D col;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
 
     private void Start()
     {
@@ -44,7 +39,6 @@ public class RangedEnemyAttackController : EnemyAttackController
         EnemyBulletController bc = obj.GetComponent<EnemyBulletController>();
 
         bc.SetValues(finalDmg, projectileSpd, projectileLifetime);
-      
 
         timer = 0;
     }

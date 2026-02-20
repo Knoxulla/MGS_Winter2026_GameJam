@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: UpgradeSO_DoubleShot
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeSO
   upgradeID: 0
+  isReoccuring: 0
   upgradeIcon: {fileID: 0}
   upgradeName: Double Shot
   upgradeDescription: Shoot 2 bullets instead of one!
+  cost: 0
   speed: 0
   maxHealth: 0
   currentHealth: 0
