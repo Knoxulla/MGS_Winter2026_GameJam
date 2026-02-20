@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAttackController : MonoBehaviour
@@ -8,6 +9,7 @@ public class EnemyAttackController : MonoBehaviour
     public float finalDmg = 1;
 
     public bool isAttacking = false;
+    public float lengthOfAttack = 1f;
 
     public float timer = 0;
     
@@ -32,9 +34,13 @@ public class EnemyAttackController : MonoBehaviour
         else
         {
             col2D.enabled = false;
-        } 
-        
-        timer += Time.deltaTime;
+        }
+
+        if (!isAttacking)
+        {
+            timer += Time.deltaTime;
+        }
+       
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -47,9 +53,17 @@ public class EnemyAttackController : MonoBehaviour
 
     void PerformAttack(Collider2D other)
     {
+        isAttacking = true;
         timer = 0;
         finalDmg = dmg * dmgMulti;
         PlayerHealthController playerHealthController = other.gameObject.GetComponent<PlayerHealthController>();
         playerHealthController.UpdateHealth(playerHealthController.currentHealth - finalDmg);
+    }
+
+    // time before isAttacking becomes false so the attack animation can finish
+    private IEnumerator AttackCDAnimation()
+    {
+        yield return new WaitForSeconds(lengthOfAttack);
+        isAttacking = false;
     }
 }
