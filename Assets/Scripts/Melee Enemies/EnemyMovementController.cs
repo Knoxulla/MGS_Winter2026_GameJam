@@ -5,6 +5,7 @@ using UnityEngine.Splines;
 
 public class EnemyMovementController : MonoBehaviour
 {
+    [SerializeField]
     protected float speed = 2;
     public float speedMulti = 1;
 
