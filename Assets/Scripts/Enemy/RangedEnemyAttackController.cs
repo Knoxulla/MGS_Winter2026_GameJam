@@ -37,7 +37,7 @@ public class RangedEnemyAttackController : EnemyAttackController
         // Instantiate enemy bullet
        GameObject obj = Instantiate(bullet, transform);
         EnemyBulletController bc = obj.GetComponent<EnemyBulletController>();
-
+        bc.playerDetectionController = gameObject.GetComponent<PlayerDetectionController>();
         bc.SetValues(finalDmg, projectileSpd, projectileLifetime);
 
         timer = 0;

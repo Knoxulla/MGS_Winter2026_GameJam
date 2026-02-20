@@ -9,11 +9,10 @@ public class EnemyBulletController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float lifetime;
 
-    [SerializeField] Rigidbody rb;
+    [SerializeField] Rigidbody2D rb;
 
     protected Vector2 targetDirection;
-
-
+    public PlayerDetectionController playerDetectionController;
     public void SetValues(float damage, float speedAmt, float bulletLifetime)
     {
         dmg = damage;
@@ -23,11 +22,25 @@ public class EnemyBulletController : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        transform.position = Vector3.zero;
+
+        rb = GetComponent<Rigidbody2D>();
 
         transform.parent = null;
 
-        if (targetDirection == Vector2.zero || GetComponent<EnemyMASTER>().attackController.isAttacking)
+
+        if (playerDetectionController.detectedPlayer)
+        {
+            targetDirection = playerDetectionController.DirectionToPlayer;
+        }
+        else
+        {
+            targetDirection = Vector2.zero;
+        }
+    
+       
+
+        if (targetDirection == Vector2.zero)
         {
             rb.linearVelocity = Vector2.zero;
         }
@@ -35,8 +48,6 @@ public class EnemyBulletController : MonoBehaviour
         {
             rb.linearVelocity = targetDirection.normalized * speed;
         }
-
-
     }
 
     private void Update()
