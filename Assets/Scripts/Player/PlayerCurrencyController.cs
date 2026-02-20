@@ -25,7 +25,7 @@ public class PlayerCurrencyController : MonoBehaviour
 
     public void InvestMoney()
     {
-        investedCurrency = currentCurrency;
+        investedCurrency += currentCurrency;
         currentCurrency = 0;
     }
 }

@@ -66,29 +66,29 @@ public class ShopSystemController : MonoBehaviour
         {
             if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 100) 
             {
-              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.01f);
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.20f);
             } 
             else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency < 500) 
             {
-              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.02f);   
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.40f);   
             }
             else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency >= 900) 
             {
-              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f);  
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.60f);  
             }
         }
 
         if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 100) 
         {
-            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.01f).ToString();
+            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.20f).ToString();
         }  
         else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency < 500) 
         { 
-            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.02f).ToString();
+            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.40f).ToString();
         }
         else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency >= 900) 
         {   
-            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f).ToString(); 
+            ROI.text = (PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.60f).ToString(); 
         }
 
         int slot1 = Random.Range(1, unlockableUpgrades.Count);
