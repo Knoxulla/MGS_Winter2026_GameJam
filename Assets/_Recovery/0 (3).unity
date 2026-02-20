@@ -37681,10 +37681,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 719909340433396101, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
-      propertyPath: maxXP
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 771823184294182598, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -37741,6 +37737,10 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1970676485}
+    - target: {fileID: 4731765864954146468, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7724148279692848592, guid: 71318c8a1b1cdbb46a17e9336774142b, type: 3}
       propertyPath: walkDownGun
       value: 

@@ -6,6 +6,8 @@ public class PlayerExperienceController : MonoBehaviour
     public float maxXP;
     public int currentLevel;
 
+    public ShopSystemController shop;
+
 
     private void Start()
     {
@@ -39,6 +41,6 @@ public class PlayerExperienceController : MonoBehaviour
         EventManager.Instance.player_events.PlayerExpChanged(currentXP);
         // Apply the new round modifiers
         RoundSystemController.Instance.UpdateStats();
-        ShopSystemController.Instance.OpenShop();
+        shop.OpenShop();
     }
 }
