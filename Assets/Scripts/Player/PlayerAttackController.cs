@@ -15,6 +15,7 @@ public class PlayerAttackController : BulletSpawner
     [Header("Speed")]
     [SerializeField] float slowPerFrame = 0.01f;
     [SerializeField] float speedUpPerFrame = 0.03f;
+    [SerializeField] float minSpeed = 10f;
     private float originalSPD = 1;
 
     [Header("Charge")]
@@ -47,13 +48,13 @@ public class PlayerAttackController : BulletSpawner
         if (isAttacking)
         {
             currentCharge += chargeAddedPerFrame;
-            if (PlayerMASTER.Instance.playerMovementController.adjustedSpeed > 0.01f)
+            if (PlayerMASTER.Instance.playerMovementController.adjustedSpeed >= minSpeed)
             {
                 PlayerMASTER.Instance.playerMovementController.adjustedSpeed -= slowPerFrame;
             }
             else
             {
-                PlayerMASTER.Instance.playerMovementController.adjustedSpeed = 0.01f;
+                PlayerMASTER.Instance.playerMovementController.adjustedSpeed = minSpeed;
             }
         }
         else

@@ -41,7 +41,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Update()
     {
-        rb.AddForce(input * (speed * adjustedSpeed));
+        rb.AddForce(input * (speed + adjustedSpeed));
 
         RotatePlayer();
 

@@ -105,7 +105,7 @@ MonoBehaviour:
   idleDown: {fileID: -6863445211018041334, guid: af3fee33e6927d944aede8b763b55323, type: 3}
   idleLeft: {fileID: -681356279539387494, guid: af3fee33e6927d944aede8b763b55323, type: 3}
   idleRight: {fileID: -1742030827279190362, guid: af3fee33e6927d944aede8b763b55323, type: 3}
-  speed: 100
+  speed: 50
   adjustedSpeed: 1
 --- !u!114 &719909340433396101
 MonoBehaviour:
@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerExperienceControiller
   currentXP: 0
-  maxXP: 10
+  maxXP: 24
   currentLevel: 1
+  shop: {fileID: 0}
 --- !u!114 &8918169551643806228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f51699190c128342ad26042baa2bfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackController
+  cooldown: 0
+  timer: 0
   bulletPatterns: []
   <BulletAllegiance>k__BackingField: 1
   spawnPoint: {fileID: 5122829362617151349}
@@ -145,6 +148,7 @@ MonoBehaviour:
   modifiedDmg: 1
   slowPerFrame: 0.01
   speedUpPerFrame: 0.03
+  minSpeed: 10
   currentCharge: 0
   maxChargeAmt: 20
   chargeAddedPerFrame: 0.5
@@ -376,6 +380,7 @@ MonoBehaviour:
   currentXP: 0
   maxXP: 0
   currentCurrency: 0
+  investedCurrency: 0
 --- !u!1 &2162714732781644026
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   isReoccuring: 0
   upgradeIcon: {fileID: 21300000, guid: 2885c6a7d3462f44f8310505413f24b4, type: 3}
   upgradeName: Ring of Pain+
-  upgradeDescription: More blades. More pain.
+  upgradeDescription: More blades. More pain. Subsequent purchases award ATK bonus!
   cost: 700
   speed: 0
   maxHealth: 0
