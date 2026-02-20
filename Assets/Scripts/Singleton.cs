@@ -48,5 +48,9 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Debug.LogWarningFormat($"[Singleton] Destroying duplicated instances of '{typeof(T)}'.");
             Destroy(gameObject);
         }
+        else
+        { 
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
