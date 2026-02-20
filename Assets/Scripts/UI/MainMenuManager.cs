@@ -32,7 +32,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void OpenOptions()
     {
-        SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Options", LoadSceneMode.Additive);
     }
 
     private void ExitGame()
