@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyAttackController : MonoBehaviour
 {
     [SerializeField]
-    private float dmg = 1;
+    public float dmg = 1;
     public float dmgMulti = 1;
     public float finalDmg = 1;
 
@@ -24,9 +24,15 @@ public class EnemyAttackController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   protected void Update()
     {
 
+        CheckAttackState();
+       
+    }
+
+    public virtual void CheckAttackState()
+    {
         if (timer >= attackCd)
         {
             col2D.enabled = true;
@@ -40,8 +46,8 @@ public class EnemyAttackController : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-       
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -51,7 +57,7 @@ public class EnemyAttackController : MonoBehaviour
         }
     }
 
-    void PerformAttack(Collider2D other)
+    public virtual void PerformAttack(Collider2D other)
     {
         isAttacking = true;
         timer = 0;
