@@ -28,7 +28,6 @@ public class PlayerExperienceController : MonoBehaviour
         if (currentXP >= maxXP)
         {
             LevelUp();
-            
         }
     }
 

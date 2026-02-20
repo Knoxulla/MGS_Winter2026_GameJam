@@ -6,6 +6,8 @@ public class PlayerCurrencyController : MonoBehaviour
     public float maxXP;
     public float currentCurrency;
 
+    public float investedCurrency;
+
 
     private void Start()
     {
@@ -18,6 +20,12 @@ public class PlayerCurrencyController : MonoBehaviour
 
     public void ResetMoney()
     { 
+        currentCurrency = 0;
+    }
+
+    public void InvestMoney()
+    {
+        investedCurrency = currentCurrency;
         currentCurrency = 0;
     }
 }

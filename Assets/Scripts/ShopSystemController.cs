@@ -6,6 +6,8 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 using TMPro;
+using System.Security.Cryptography;
+using Unity.Collections;
 
 public class ShopSystemController : MonoBehaviour
 {
@@ -37,6 +39,21 @@ public class ShopSystemController : MonoBehaviour
 
     public void OpenShop()
     {
+        if (PlayerMASTER.Instance.playerExperienceController.currentLevel % 5 == 0)
+        {
+            if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency <= 30) 
+            {
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.01f);   
+            } 
+            else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency < 60) 
+            {
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.02f);   
+            }
+            else if (PlayerMASTER.Instance.playerCurrencyController.investedCurrency >= 90) 
+            {
+              PlayerMASTER.Instance.playerCurrencyController.AddCurrency(PlayerMASTER.Instance.playerCurrencyController.investedCurrency * 1.03f);   
+            }
+        }
         gameObject.SetActive(true);
     }
 
@@ -87,15 +104,27 @@ public class ShopSystemController : MonoBehaviour
 
     public void OnEnable()
     {
-        
+        int slot1 = Random.Range(1, unlockableUpgrades.Count);
+        int slot2 = Random.Range(1, unlockableUpgrades.Count);
+        int slot3 = Random.Range(1, unlockableUpgrades.Count);
+
+        while (slot2 == slot1)
+        {
+            slot2 = Random.Range(1, unlockableUpgrades.Count);
+        }
+
+        while (slot3 == slot2 || slot3 == slot1)
+        {
+            slot3 = Random.Range(1, unlockableUpgrades.Count);
+        }
+
+        AssignButtons(slot1, slot2, slot3);
     }
 
     public void AssignButtons(int slot1, int slot2, int slot3)
     {
 
         for (int i = 0; i < unlockableUpgrades.Count; i++ ) {
-
-            
 
             if (i == slot1)
             {
