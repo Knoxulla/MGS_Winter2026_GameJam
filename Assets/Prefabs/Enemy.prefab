@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthController
   maxHealth: 10
   currentHealth: 10
-  expToDrop: 1
+  expToDrop: 3
 --- !u!114 &3967533186022269441
 MonoBehaviour:
   m_ObjectHideFlags: 0

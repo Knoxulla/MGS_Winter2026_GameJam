@@ -54,7 +54,7 @@ public class Bullet_BASE : MonoBehaviour
     
         if (isPlayerAllied)
         {
-            damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg;
+            damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg + bulletSO.damageAmount;
             transform.position = PlayerMASTER.Instance.transform.position;
         }
         else
@@ -70,7 +70,7 @@ public class Bullet_BASE : MonoBehaviour
 
         if (isPlayerAllied)
         {
-           damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg;
+           damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg + bulletSO.damageAmount;
             transform.position = PlayerMASTER.Instance.transform.position;
         }
         else

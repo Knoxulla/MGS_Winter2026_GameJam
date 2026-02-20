@@ -13,15 +13,11 @@ public class EnemyHealthController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        checkDeath();
-    }
 
     public void takeDamage(float damage)
     {
         currentHealth -= damage;
+        checkDeath();
     }
 
     public void checkDeath()

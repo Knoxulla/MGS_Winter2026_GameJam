@@ -10,6 +10,14 @@ public class PlayerEvents
         OnPlayerHealthChanged?.Invoke(healthGained);
     }
 
+        // Player EXP events
+    public event Action<float> OnPlayerExpChanged;
+
+    public void PlayerExpChanged(float expGained)
+    {
+        OnPlayerExpChanged?.Invoke(expGained);
+    }
+
     // Game Over Event
     public event Action OnGameOver;
     public void GameOver()
