@@ -56,6 +56,12 @@ public class Bullet_BASE : MonoBehaviour
         {
             damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg + bulletSO.damageAmount;
             transform.position = PlayerMASTER.Instance.transform.position;
+
+            if (damage < PlayerMASTER.Instance.playerAttackController.minDmg)
+            {
+                damage = PlayerMASTER.Instance.playerAttackController.minDmg;
+
+            }
         }
         else
         {
@@ -72,6 +78,12 @@ public class Bullet_BASE : MonoBehaviour
         {
            damage = PlayerMASTER.Instance.playerAttackController.modifiedDmg + bulletSO.damageAmount;
             transform.position = PlayerMASTER.Instance.transform.position;
+
+            if (damage < PlayerMASTER.Instance.playerAttackController.minDmg)
+            {
+                damage = PlayerMASTER.Instance.playerAttackController.minDmg;
+                    
+            }
         }
         else
         {
